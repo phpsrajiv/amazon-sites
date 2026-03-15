@@ -42,11 +42,11 @@ services:
       DRUPAL_HASH_SALT: ${DRUPAL_HASH_SALT}
       DRUPAL_ENV: ${DRUPAL_ENV}
     volumes:
-      - drupal_files:/opt/drupal/web/sites/default/files
-      - ./seller-backend/drupal/web/modules/custom:/opt/drupal/web/modules/custom
-      - ./seller-backend/drupal/web/themes/custom:/opt/drupal/web/themes/custom
-      - ./seller-backend/config/settings.php:/opt/drupal/web/sites/default/settings.php
-      - ./seller-backend/config/services.yml:/opt/drupal/web/sites/default/services.yml
+      - drupal_files:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/files
+      - ./seller-backend/drupal/web/modules/custom:/docker/sellerbuddy/seller-backend/drupal/web/modules/custom
+      - ./seller-backend/drupal/web/themes/custom:/docker/sellerbuddy/seller-backend/drupal/web/themes/custom
+      - ./seller-backend/config/settings.php:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/settings.php
+      - ./seller-backend/config/services.yml:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/services.yml
     ports:
       - "8080:80"
     networks:
@@ -62,12 +62,12 @@ services:
     depends_on:
       - drupal
     volumes:
-      - ./seller-frontend/src:/app/src
-      - ./seller-frontend/public:/app/public
-      - ./seller-frontend/index.html:/app/index.html
-      - ./seller-frontend/vite.config.ts:/app/vite.config.ts
+      - ./seller-frontend/src:/docker/sellerbuddy/seller-frontend/src
+      - ./seller-frontend/public:/docker/sellerbuddy/seller-frontend/public
+      - ./seller-frontend/index.html:/docker/sellerbuddy/seller-frontend/index.html
+      - ./seller-frontend/vite.config.ts:/docker/sellerbuddy/seller-frontend/vite.config.ts
     ports:
-      - "3000:3000"
+      - "3003:3003"
     networks:
       - selleragent-network
 

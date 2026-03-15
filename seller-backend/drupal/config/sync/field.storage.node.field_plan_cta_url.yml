@@ -1,0 +1,19 @@
+uuid: 2c5af58a-e8e2-4242-987d-93ca567e35d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_plan_cta_url
+field_name: field_plan_cta_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

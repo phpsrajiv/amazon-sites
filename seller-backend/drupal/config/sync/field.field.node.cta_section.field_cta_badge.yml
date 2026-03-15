@@ -1,0 +1,19 @@
+uuid: 8e2894b2-b330-436a-9310-ba6c801f2fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_badge
+    - node.type.cta_section
+id: node.cta_section.field_cta_badge
+field_name: field_cta_badge
+entity_type: node
+bundle: cta_section
+label: 'Badge Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

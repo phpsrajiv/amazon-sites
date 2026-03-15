@@ -1,0 +1,14 @@
+uuid: 78edc22d-65a9-4f94-94f9-bb8914ee520c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.trial_user
+  module:
+    - user
+id: user_add_role_action.trial_user
+label: 'Add the Trial User role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: trial_user

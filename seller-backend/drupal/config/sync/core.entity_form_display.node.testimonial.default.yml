@@ -1,0 +1,84 @@
+uuid: 0a1058a4-648e-48da-8ff6-32e518f79300
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testimonial.field_testimonial_author
+    - field.field.node.testimonial.field_testimonial_avatar
+    - field.field.node.testimonial.field_testimonial_body
+    - field.field.node.testimonial.field_testimonial_company
+    - field.field.node.testimonial.field_testimonial_rating
+    - field.field.node.testimonial.field_testimonial_role
+    - field.field.node.testimonial.field_testimonial_weight
+    - node.type.testimonial
+  module:
+    - path
+id: node.testimonial.default
+targetEntityType: node
+bundle: testimonial
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_testimonial_body:
+    type: string_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_testimonial_author: true
+  field_testimonial_avatar: true
+  field_testimonial_company: true
+  field_testimonial_rating: true
+  field_testimonial_role: true
+  field_testimonial_weight: true
+  promote: true
+  sticky: true

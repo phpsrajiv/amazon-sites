@@ -1,0 +1,25 @@
+uuid: c18bc560-dc09-4fd7-83bc-75046314f314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.result_metric.field_metric_icon
+    - field.field.node.result_metric.field_metric_value
+    - field.field.node.result_metric.field_metric_weight
+    - node.type.result_metric
+  module:
+    - user
+id: node.result_metric.default
+targetEntityType: node
+bundle: result_metric
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metric_icon: true
+  field_metric_value: true
+  field_metric_weight: true

@@ -1,0 +1,30 @@
+uuid: 86fff06c-7211-497c-b49c-598cc9951aca
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_brand_type
+field_name: field_brand_type
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: logo
+      label: Logo
+    -
+      value: favicon
+      label: Favicon
+    -
+      value: og_image
+      label: 'OG Image'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

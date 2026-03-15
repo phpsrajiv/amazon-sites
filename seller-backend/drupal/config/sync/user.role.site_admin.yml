@@ -1,0 +1,28 @@
+uuid: cab3461e-e370-411d-95db-ed56ad6c3052
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+    - media
+    - node
+    - system
+    - taxonomy
+id: site_admin
+label: 'Site Admin'
+weight: 5
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access media overview'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'create media'
+  - 'delete any media'
+  - 'update any media'

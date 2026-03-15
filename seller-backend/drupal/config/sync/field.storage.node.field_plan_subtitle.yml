@@ -1,0 +1,21 @@
+uuid: cf26e080-c1be-417c-8347-937f395f448d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_plan_subtitle
+field_name: field_plan_subtitle
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 4773ded5-e5e4-4562-94ab-385cd06dca05
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feature Category'
+vid: feature_category
+description: null
+weight: 0
+new_revision: false

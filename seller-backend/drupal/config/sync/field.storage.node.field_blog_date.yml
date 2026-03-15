@@ -1,0 +1,21 @@
+uuid: cd650471-9c71-474e-b6ff-7f7ef07f69eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_blog_date
+field_name: field_blog_date
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

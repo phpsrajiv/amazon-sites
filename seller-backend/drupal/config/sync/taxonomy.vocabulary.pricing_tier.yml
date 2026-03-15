@@ -1,0 +1,9 @@
+uuid: 438ca8de-231a-4feb-860b-06c01e847014
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pricing Tier'
+vid: pricing_tier
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,29 @@
+uuid: 990c9faa-8370-4487-9368-1ee58265694b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feature.field_feature_bullets
+    - field.field.node.feature.field_feature_category
+    - field.field.node.feature.field_feature_description
+    - field.field.node.feature.field_feature_icon
+    - field.field.node.feature.field_feature_weight
+    - node.type.feature
+  module:
+    - user
+id: node.feature.default
+targetEntityType: node
+bundle: feature
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_feature_bullets: true
+  field_feature_category: true
+  field_feature_description: true
+  field_feature_icon: true
+  field_feature_weight: true

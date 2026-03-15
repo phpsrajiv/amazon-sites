@@ -1,0 +1,23 @@
+uuid: a02ad957-ea5c-4dab-a32e-b3027835e48b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_weight
+    - node.type.feature
+id: node.feature.field_feature_weight
+field_name: field_feature_weight
+entity_type: node
+bundle: feature
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,25 @@
+uuid: a8314663-fe1f-49b1-8263-e887802df2b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pain_point.field_pain_description
+    - field.field.node.pain_point.field_pain_icon
+    - field.field.node.pain_point.field_pain_weight
+    - node.type.pain_point
+  module:
+    - user
+id: node.pain_point.default
+targetEntityType: node
+bundle: pain_point
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_pain_description: true
+  field_pain_icon: true
+  field_pain_weight: true

@@ -1,0 +1,5 @@
+services:
+  _defaults:
+    autoconfigure: true
+  selleragent_core.route_subscriber:
+    class: Drupal\selleragent_core\Routing\RouteSubscriber

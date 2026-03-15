@@ -1,0 +1,20 @@
+uuid: 77549138-f95c-432a-9f66-d455ebfd4f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_trial_started
+  module:
+    - user
+id: user.user.field_trial_started
+field_name: field_trial_started
+entity_type: user
+bundle: user
+label: 'Trial Started'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

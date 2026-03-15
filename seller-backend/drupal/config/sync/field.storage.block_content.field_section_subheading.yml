@@ -1,0 +1,19 @@
+uuid: f4bc653d-e484-480e-be01-06f4b2f6bf2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_section_subheading
+field_name: field_section_subheading
+entity_type: block_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

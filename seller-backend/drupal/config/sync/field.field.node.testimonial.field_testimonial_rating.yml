@@ -1,0 +1,23 @@
+uuid: 29a670f2-d2b4-4a12-a4d2-75ad56392aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_rating
+    - node.type.testimonial
+id: node.testimonial.field_testimonial_rating
+field_name: field_testimonial_rating
+entity_type: node
+bundle: testimonial
+label: 'Star Rating (1-5)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

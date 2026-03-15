@@ -1,0 +1,64 @@
+uuid: 29d05279-6101-4f13-908a-fe2107406f03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pain_point.field_pain_description
+    - field.field.node.pain_point.field_pain_icon
+    - field.field.node.pain_point.field_pain_weight
+    - node.type.pain_point
+  module:
+    - path
+id: node.pain_point.default
+targetEntityType: node
+bundle: pain_point
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_pain_description: true
+  field_pain_icon: true
+  field_pain_weight: true
+  promote: true
+  sticky: true

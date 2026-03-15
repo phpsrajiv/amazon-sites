@@ -1,0 +1,23 @@
+uuid: 8cbddc20-0eda-481c-a3d8-45213e87baf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_weight
+    - node.type.testimonial
+id: node.testimonial.field_testimonial_weight
+field_name: field_testimonial_weight
+entity_type: node
+bundle: testimonial
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

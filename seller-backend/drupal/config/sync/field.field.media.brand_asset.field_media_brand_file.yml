@@ -1,0 +1,27 @@
+uuid: fa9c48cb-667f-42fa-9dab-d6b91b4cf06d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_brand_file
+    - media.type.brand_asset
+  module:
+    - file
+id: media.brand_asset.field_media_brand_file
+field_name: field_media_brand_file
+entity_type: media
+bundle: brand_asset
+label: 'Brand File'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg svg gif webp ico'
+  max_filesize: ''
+  description_field: false
+field_type: file

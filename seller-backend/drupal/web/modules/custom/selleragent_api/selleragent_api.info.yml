@@ -1,0 +1,10 @@
+name: SellerAgent API
+type: module
+description: Custom REST API endpoints for the SellerAgent AI decoupled frontend.
+package: SellerAgent
+core_version_requirement: ^11
+dependencies:
+  - selleragent_core:selleragent_core
+  - drupal:rest
+  - drupal:serialization
+  - drupal:jsonapi

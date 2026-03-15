@@ -1,0 +1,27 @@
+uuid: 5c761a66-9d16-4edf-be9a-ec01f2513ec8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_feature_category
+field_name: field_feature_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: core
+      label: Core
+    -
+      value: advanced
+      label: Advanced
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

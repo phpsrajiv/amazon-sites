@@ -1,0 +1,15 @@
+uuid: f135e0d4-64cb-4b53-8bdb-feddd68acc0f
+langcode: en
+status: true
+dependencies: {  }
+name: hero_slide
+label: 'Hero Slide (1400x600)'
+effects:
+  bba08a39-1902-4ddd-9bcd-da5360cea683:
+    uuid: bba08a39-1902-4ddd-9bcd-da5360cea683
+    id: image_scale_and_crop
+    weight: null
+    data:
+      width: 1400
+      height: 600
+      anchor: center-center

@@ -1,0 +1,40 @@
+selleragent_api.landing_page:
+  path: '/api/v1/landing-page'
+  defaults:
+    _controller: '\Drupal\selleragent_api\Controller\LandingPageController::getData'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]
+
+selleragent_api.site_settings:
+  path: '/api/v1/site-settings'
+  defaults:
+    _controller: '\Drupal\selleragent_api\Controller\SiteSettingsController::getSettings'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]
+
+selleragent_api.trial_signup:
+  path: '/api/v1/trial-signup'
+  defaults:
+    _controller: '\Drupal\selleragent_api\Controller\TrialSignupController::signup'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST]
+
+selleragent_api.blogs:
+  path: '/api/v1/blogs'
+  defaults:
+    _controller: '\Drupal\selleragent_api\Controller\BlogController::getAll'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]
+
+selleragent_api.blog:
+  path: '/api/v1/blog/{nid}'
+  defaults:
+    _controller: '\Drupal\selleragent_api\Controller\BlogController::getOne'
+  requirements:
+    _access: 'TRUE'
+    nid: '\d+'
+  methods: [GET]

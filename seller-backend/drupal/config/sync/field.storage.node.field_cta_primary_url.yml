@@ -1,0 +1,19 @@
+uuid: f8b2eedf-8680-4ea2-8b8d-f65882215371
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_cta_primary_url
+field_name: field_cta_primary_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,7 @@
+drupal/vendor
+drupal/web/sites/default/files
+.git
+.env
+*.md
+mariadb
+scripts

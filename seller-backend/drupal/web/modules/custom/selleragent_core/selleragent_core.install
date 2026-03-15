@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the SellerAgent Core module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function selleragent_core_install() {
+  // Create the trial_user role if it doesn't exist.
+  if (!Role::load('trial_user')) {
+    $role = Role::create([
+      'id' => 'trial_user',
+      'label' => 'Trial User',
+    ]);
+    $role->grantPermission('access content');
+    $role->save();
+  }
+
+  // Create the content_editor role if it doesn't exist.
+  if (!Role::load('content_editor')) {
+    $role = Role::create([
+      'id' => 'content_editor',
+      'label' => 'Content Editor',
+    ]);
+    $role->grantPermission('access content');
+    $role->grantPermission('access content overview');
+    $role->grantPermission('create article content');
+    $role->grantPermission('edit any article content');
+    $role->grantPermission('delete any article content');
+    $role->grantPermission('administer nodes');
+    $role->grantPermission('access media overview');
+    $role->grantPermission('create media');
+    $role->grantPermission('update any media');
+    $role->save();
+  }
+
+  // Create the site_admin role if it doesn't exist.
+  if (!Role::load('site_admin')) {
+    $role = Role::create([
+      'id' => 'site_admin',
+      'label' => 'Site Admin',
+    ]);
+    $role->grantPermission('access content');
+    $role->grantPermission('administer nodes');
+    $role->grantPermission('administer content types');
+    $role->grantPermission('administer users');
+    $role->grantPermission('administer site configuration');
+    $role->save();
+  }
+
+  \Drupal::messenger()->addStatus(t('SellerAgent Core: Roles created successfully.'));
+}

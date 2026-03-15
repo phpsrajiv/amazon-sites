@@ -1,0 +1,19 @@
+uuid: 2863bccf-acb1-4486-9b6d-4bd62c3d44c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plan_cta_text
+    - node.type.pricing_plan
+id: node.pricing_plan.field_plan_cta_text
+field_name: field_plan_cta_text
+entity_type: node
+bundle: pricing_plan
+label: 'CTA Button Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

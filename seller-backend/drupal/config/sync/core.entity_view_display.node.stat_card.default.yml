@@ -1,0 +1,29 @@
+uuid: 323d9d88-d04b-485b-b7bf-9e3d93be4091
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stat_card.field_stat_icon
+    - field.field.node.stat_card.field_stat_prefix
+    - field.field.node.stat_card.field_stat_suffix
+    - field.field.node.stat_card.field_stat_value
+    - field.field.node.stat_card.field_stat_weight
+    - node.type.stat_card
+  module:
+    - user
+id: node.stat_card.default
+targetEntityType: node
+bundle: stat_card
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_stat_icon: true
+  field_stat_prefix: true
+  field_stat_suffix: true
+  field_stat_value: true
+  field_stat_weight: true

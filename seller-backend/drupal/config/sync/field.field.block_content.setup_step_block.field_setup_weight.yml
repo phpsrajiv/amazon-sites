@@ -1,0 +1,23 @@
+uuid: dbbc22fc-3ba1-4e7e-8559-83878b8fd9ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.setup_step_block
+    - field.storage.block_content.field_setup_weight
+id: block_content.setup_step_block.field_setup_weight
+field_name: field_setup_weight
+entity_type: block_content
+bundle: setup_step_block
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,31 @@
+uuid: 25889a2c-70d0-4cc0-a9c8-0e971f88cb3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cta_section.field_cta_badge
+    - field.field.node.cta_section.field_cta_primary_text
+    - field.field.node.cta_section.field_cta_primary_url
+    - field.field.node.cta_section.field_cta_secondary_text
+    - field.field.node.cta_section.field_cta_secondary_url
+    - field.field.node.cta_section.field_cta_subheading
+    - node.type.cta_section
+  module:
+    - user
+id: node.cta_section.default
+targetEntityType: node
+bundle: cta_section
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cta_badge: true
+  field_cta_primary_text: true
+  field_cta_primary_url: true
+  field_cta_secondary_text: true
+  field_cta_secondary_url: true
+  field_cta_subheading: true

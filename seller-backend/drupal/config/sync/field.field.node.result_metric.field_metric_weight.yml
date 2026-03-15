@@ -1,0 +1,23 @@
+uuid: 0834f0bd-b4d9-402e-8c37-298687940cf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metric_weight
+    - node.type.result_metric
+id: node.result_metric.field_metric_weight
+field_name: field_metric_weight
+entity_type: node
+bundle: result_metric
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

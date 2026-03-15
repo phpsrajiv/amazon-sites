@@ -1,0 +1,11 @@
+uuid: a3ac485e-d712-4cb8-974e-9ca6bc058773
+langcode: en
+status: true
+dependencies: {  }
+name: 'Statistics Card'
+type: stat_card
+description: 'Trust/metrics cards displayed under the hero.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

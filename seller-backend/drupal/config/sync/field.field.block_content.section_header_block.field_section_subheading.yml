@@ -1,0 +1,19 @@
+uuid: ceaa7767-7e91-4791-9432-2a2c68bf79b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_header_block
+    - field.storage.block_content.field_section_subheading
+id: block_content.section_header_block.field_section_subheading
+field_name: field_section_subheading
+entity_type: block_content
+bundle: section_header_block
+label: Subheading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: dcc35eea-b63f-49ca-8168-11c987a772fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.setup_step_block
+    - field.storage.block_content.field_setup_live_badge
+id: block_content.setup_step_block.field_setup_live_badge
+field_name: field_setup_live_badge
+entity_type: block_content
+bundle: setup_step_block
+label: 'Show LIVE Badge'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

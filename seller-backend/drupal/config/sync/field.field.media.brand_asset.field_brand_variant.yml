@@ -1,0 +1,21 @@
+uuid: 6b11afc1-a9d3-440b-b3ab-34bbbd773a3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brand_variant
+    - media.type.brand_asset
+  module:
+    - options
+id: media.brand_asset.field_brand_variant
+field_name: field_brand_variant
+entity_type: media
+bundle: brand_asset
+label: Variant
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

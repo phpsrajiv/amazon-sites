@@ -1,0 +1,13 @@
+uuid: 18329284-a349-4b7f-b08a-5f8d62c525e2
+langcode: en
+status: true
+dependencies: {  }
+id: brand_asset
+label: 'Brand Asset'
+description: 'Logo, favicon, and brand image files.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_brand_file
+field_map: {  }

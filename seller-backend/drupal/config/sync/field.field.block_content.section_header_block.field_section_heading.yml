@@ -1,0 +1,19 @@
+uuid: 547697ff-48ab-4229-8b56-172b2f4aa594
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_header_block
+    - field.storage.block_content.field_section_heading
+id: block_content.section_header_block.field_section_heading
+field_name: field_section_heading
+entity_type: block_content
+bundle: section_header_block
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

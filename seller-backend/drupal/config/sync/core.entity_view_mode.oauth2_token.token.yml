@@ -1,0 +1,11 @@
+uuid: 6f49139b-a760-477b-b92a-aefc22e13cfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - simple_oauth
+id: oauth2_token.token
+label: Token
+description: null
+targetEntityType: oauth2_token
+cache: true

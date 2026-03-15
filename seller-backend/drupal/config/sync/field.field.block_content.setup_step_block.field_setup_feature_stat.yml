@@ -1,0 +1,19 @@
+uuid: a26d121b-3f78-44dc-a1a4-b6d74d84099c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.setup_step_block
+    - field.storage.block_content.field_setup_feature_stat
+id: block_content.setup_step_block.field_setup_feature_stat
+field_name: field_setup_feature_stat
+entity_type: block_content
+bundle: setup_step_block
+label: 'Feature Stat'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

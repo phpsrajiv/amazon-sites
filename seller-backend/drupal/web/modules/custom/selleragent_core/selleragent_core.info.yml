@@ -1,0 +1,10 @@
+name: SellerAgent Core
+type: module
+description: Core functionality for SellerAgent AI platform.
+package: SellerAgent
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:jsonapi
+  - drupal:media
+  - drupal:taxonomy

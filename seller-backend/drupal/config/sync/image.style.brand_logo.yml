@@ -1,0 +1,15 @@
+uuid: 31f360e4-c103-40a2-a2ea-158117102e17
+langcode: en
+status: true
+dependencies: {  }
+name: brand_logo
+label: 'Brand Logo (200w)'
+effects:
+  75c3511e-820c-43bf-8dce-1ffaab46989c:
+    uuid: 75c3511e-820c-43bf-8dce-1ffaab46989c
+    id: image_scale
+    weight: null
+    data:
+      width: 200
+      height: null
+      upscale: false

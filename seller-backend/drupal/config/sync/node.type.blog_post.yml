@@ -1,0 +1,11 @@
+uuid: 188cec96-5a7a-40eb-af02-28deae58f266
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Post'
+type: blog_post
+description: 'Blog articles for the SellerAgent AI website.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

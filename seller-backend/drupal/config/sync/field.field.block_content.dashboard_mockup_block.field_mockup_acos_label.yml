@@ -1,0 +1,19 @@
+uuid: db6fe55c-a64f-49ad-b2b3-9615dd646aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_mockup_block
+    - field.storage.block_content.field_mockup_acos_label
+id: block_content.dashboard_mockup_block.field_mockup_acos_label
+field_name: field_mockup_acos_label
+entity_type: block_content
+bundle: dashboard_mockup_block
+label: 'ACoS Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

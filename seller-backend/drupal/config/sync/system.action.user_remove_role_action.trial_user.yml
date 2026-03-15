@@ -1,0 +1,14 @@
+uuid: 0b5758c3-d629-45ec-b230-20f216d74403
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.trial_user
+  module:
+    - user
+id: user_remove_role_action.trial_user
+label: 'Remove the Trial User role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: trial_user

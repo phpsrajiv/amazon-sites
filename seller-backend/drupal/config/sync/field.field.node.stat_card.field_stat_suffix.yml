@@ -1,0 +1,19 @@
+uuid: 63617ceb-bb7c-43a3-b4a9-d0cbdcc700ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stat_suffix
+    - node.type.stat_card
+id: node.stat_card.field_stat_suffix
+field_name: field_stat_suffix
+entity_type: node
+bundle: stat_card
+label: Suffix
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

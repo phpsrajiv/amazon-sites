@@ -1,0 +1,24 @@
+uuid: 5ac20931-21a2-4a0d-bba3-7577b965c5b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.trust_badge_block
+    - field.field.block_content.trust_badge_block.field_badge_icon
+    - field.field.block_content.trust_badge_block.field_badge_text
+id: block_content.trust_badge_block.default
+targetEntityType: block_content
+bundle: trust_badge_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_badge_icon: true
+  field_badge_text: true

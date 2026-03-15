@@ -1,0 +1,12 @@
+uuid: de8de4cb-1f68-4d68-a62c-11790fc6ec27
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: trial_user
+label: 'Trial User'
+weight: 4
+is_admin: false
+permissions:
+  - 'access content'

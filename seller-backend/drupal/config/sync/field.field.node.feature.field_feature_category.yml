@@ -1,0 +1,21 @@
+uuid: b6f88d2c-4264-4b5c-8591-12d58a90d790
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_category
+    - node.type.feature
+  module:
+    - options
+id: node.feature.field_feature_category
+field_name: field_feature_category
+entity_type: node
+bundle: feature
+label: Category
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

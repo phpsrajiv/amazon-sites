@@ -1,0 +1,19 @@
+uuid: dfa3a0f2-80a7-4c77-9b84-841af8781b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plan_billing_period
+    - node.type.pricing_plan
+id: node.pricing_plan.field_plan_billing_period
+field_name: field_plan_billing_period
+entity_type: node
+bundle: pricing_plan
+label: 'Billing Period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

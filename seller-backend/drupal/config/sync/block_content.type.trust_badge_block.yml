@@ -1,0 +1,8 @@
+uuid: c4c90fcf-f21a-4b9f-9d2f-2cd377565637
+langcode: en
+status: true
+dependencies: {  }
+id: trust_badge_block
+label: 'Trust Badge Block'
+revision: true
+description: null

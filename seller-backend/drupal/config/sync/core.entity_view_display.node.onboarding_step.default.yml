@@ -1,0 +1,25 @@
+uuid: df091316-0449-403d-977c-a966a9d671ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.onboarding_step.field_step_description
+    - field.field.node.onboarding_step.field_step_icon
+    - field.field.node.onboarding_step.field_step_number
+    - node.type.onboarding_step
+  module:
+    - user
+id: node.onboarding_step.default
+targetEntityType: node
+bundle: onboarding_step
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_step_description: true
+  field_step_icon: true
+  field_step_number: true

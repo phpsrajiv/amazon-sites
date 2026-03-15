@@ -1,0 +1,25 @@
+uuid: 7235d920-3294-4ba5-b56a-9891a4b9ceea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.audience_type.field_audience_description
+    - field.field.node.audience_type.field_audience_icon
+    - field.field.node.audience_type.field_audience_weight
+    - node.type.audience_type
+  module:
+    - user
+id: node.audience_type.default
+targetEntityType: node
+bundle: audience_type
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audience_description: true
+  field_audience_icon: true
+  field_audience_weight: true

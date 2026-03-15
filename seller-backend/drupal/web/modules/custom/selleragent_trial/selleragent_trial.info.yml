@@ -1,0 +1,8 @@
+name: SellerAgent Trial
+type: module
+description: Trial signup and management for SellerAgent AI.
+package: SellerAgent
+core_version_requirement: ^11
+dependencies:
+  - selleragent_core:selleragent_core
+  - drupal:user

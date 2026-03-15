@@ -1,0 +1,19 @@
+uuid: c3edc3fa-ead5-471d-a510-7885a0df19b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_mockup_block
+    - field.storage.block_content.field_mockup_chart_data
+id: block_content.dashboard_mockup_block.field_mockup_chart_data
+field_name: field_mockup_chart_data
+entity_type: block_content
+bundle: dashboard_mockup_block
+label: 'Chart Data (JSON)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

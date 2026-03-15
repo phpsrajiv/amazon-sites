@@ -1,0 +1,19 @@
+uuid: d49f7609-0b76-4b59-8c1b-53a7bba45179
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_icon_identifier
+    - media.type.icon
+id: media.icon.field_icon_identifier
+field_name: field_icon_identifier
+entity_type: media
+bundle: icon
+label: Identifier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

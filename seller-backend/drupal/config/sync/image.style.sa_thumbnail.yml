@@ -1,0 +1,15 @@
+uuid: 7e3e1fd1-cfbc-49d4-bcae-5e31efaa97cc
+langcode: en
+status: true
+dependencies: {  }
+name: sa_thumbnail
+label: 'SA Thumbnail (150x150)'
+effects:
+  25674cf1-4970-457b-a60d-cc6dfb2f9dea:
+    uuid: 25674cf1-4970-457b-a60d-cc6dfb2f9dea
+    id: image_scale_and_crop
+    weight: null
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

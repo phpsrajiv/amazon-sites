@@ -1,0 +1,19 @@
+uuid: 93b9bce8-fd02-4293-8aaf-9f2e34e25ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_tag
+    - node.type.hero_slide
+id: node.hero_slide.field_slide_tag
+field_name: field_slide_tag
+entity_type: node
+bundle: hero_slide
+label: 'Slide Tag'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

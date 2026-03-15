@@ -1,0 +1,19 @@
+uuid: 7ccb9e38-8415-4b1d-88c3-6948d7726213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_secondary_text
+    - node.type.cta_section
+id: node.cta_section.field_cta_secondary_text
+field_name: field_cta_secondary_text
+entity_type: node
+bundle: cta_section
+label: 'Secondary Button Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

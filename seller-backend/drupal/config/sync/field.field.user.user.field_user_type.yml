@@ -1,0 +1,25 @@
+uuid: e41a1e8e-d3e1-4170-b34d-e95e794c9cfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_type
+    - taxonomy.vocabulary.audience_segment
+  module:
+    - user
+id: user.user.field_user_type
+field_name: field_user_type
+entity_type: user
+bundle: user
+label: 'User Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audience_segment: audience_segment
+field_type: entity_reference

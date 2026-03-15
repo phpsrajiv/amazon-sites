@@ -1,0 +1,23 @@
+uuid: f5b32cac-82f3-479b-987d-ee8cb9bf5e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_meta_description
+    - field.field.node.landing_page.field_og_image
+    - node.type.landing_page
+  module:
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_meta_description: true
+  field_og_image: true

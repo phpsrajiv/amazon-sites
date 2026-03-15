@@ -1,0 +1,11 @@
+uuid: d92bd9bb-39ba-407c-a9db-26c376d6f510
+langcode: en
+status: true
+dependencies: {  }
+name: 'Problem / Pain Point'
+type: pain_point
+description: 'Cards in the Problems section.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

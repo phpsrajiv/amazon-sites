@@ -1,0 +1,11 @@
+uuid: a483c62d-b63d-42a4-9e77-4a9768ef6784
+langcode: en
+status: true
+dependencies: {  }
+name: 'Call to Action Section'
+type: cta_section
+description: 'Reusable CTA blocks (hero CTA, final CTA).'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

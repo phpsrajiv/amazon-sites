@@ -1,0 +1,30 @@
+uuid: 6e64dfcc-ff45-4cfc-a612-219728bb25a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.setup_step_block
+    - field.field.block_content.setup_step_block.field_setup_feature_icon
+    - field.field.block_content.setup_step_block.field_setup_feature_name
+    - field.field.block_content.setup_step_block.field_setup_feature_stat
+    - field.field.block_content.setup_step_block.field_setup_live_badge
+    - field.field.block_content.setup_step_block.field_setup_weight
+id: block_content.setup_step_block.default
+targetEntityType: block_content
+bundle: setup_step_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_setup_feature_icon: true
+  field_setup_feature_name: true
+  field_setup_feature_stat: true
+  field_setup_live_badge: true
+  field_setup_weight: true

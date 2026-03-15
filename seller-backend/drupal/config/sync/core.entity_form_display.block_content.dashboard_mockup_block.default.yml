@@ -1,0 +1,32 @@
+uuid: ca18fe79-cbd1-4470-bb65-331273e21af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_mockup_block
+    - field.field.block_content.dashboard_mockup_block.field_mockup_acos_label
+    - field.field.block_content.dashboard_mockup_block.field_mockup_acos_value
+    - field.field.block_content.dashboard_mockup_block.field_mockup_actions
+    - field.field.block_content.dashboard_mockup_block.field_mockup_chart_data
+    - field.field.block_content.dashboard_mockup_block.field_mockup_chat_answer
+    - field.field.block_content.dashboard_mockup_block.field_mockup_chat_query
+id: block_content.dashboard_mockup_block.default
+targetEntityType: block_content
+bundle: dashboard_mockup_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_mockup_acos_label: true
+  field_mockup_acos_value: true
+  field_mockup_actions: true
+  field_mockup_chart_data: true
+  field_mockup_chat_answer: true
+  field_mockup_chat_query: true

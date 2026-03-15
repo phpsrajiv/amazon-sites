@@ -1,0 +1,98 @@
+uuid: 2c3d8df9-b521-4b6f-95b0-d1d8bd68f6a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.audience_type
+    - node.type.cta_section
+    - node.type.feature
+    - node.type.hero_slide
+    - node.type.landing_page
+    - node.type.onboarding_step
+    - node.type.page
+    - node.type.pain_point
+    - node.type.pricing_plan
+    - node.type.result_metric
+    - node.type.stat_card
+    - node.type.testimonial
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create audience_type content'
+  - 'create cta_section content'
+  - 'create feature content'
+  - 'create hero_slide content'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create onboarding_step content'
+  - 'create page content'
+  - 'create pain_point content'
+  - 'create pricing_plan content'
+  - 'create result_metric content'
+  - 'create stat_card content'
+  - 'create terms in tags'
+  - 'create testimonial content'
+  - 'create url aliases'
+  - 'delete any audience_type content'
+  - 'delete any cta_section content'
+  - 'delete any feature content'
+  - 'delete any hero_slide content'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete any onboarding_step content'
+  - 'delete any pain_point content'
+  - 'delete any pricing_plan content'
+  - 'delete any result_metric content'
+  - 'delete any stat_card content'
+  - 'delete any testimonial content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any audience_type content'
+  - 'edit any cta_section content'
+  - 'edit any feature content'
+  - 'edit any hero_slide content'
+  - 'edit any landing_page content'
+  - 'edit any onboarding_step content'
+  - 'edit any pain_point content'
+  - 'edit any pricing_plan content'
+  - 'edit any result_metric content'
+  - 'edit any stat_card content'
+  - 'edit any testimonial content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'update any media'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

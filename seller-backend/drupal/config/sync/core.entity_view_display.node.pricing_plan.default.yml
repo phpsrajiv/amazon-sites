@@ -1,0 +1,39 @@
+uuid: 16606c7d-7ec7-4802-b4ef-83760a4f0ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pricing_plan.field_plan_badge
+    - field.field.node.pricing_plan.field_plan_billing_period
+    - field.field.node.pricing_plan.field_plan_cta_text
+    - field.field.node.pricing_plan.field_plan_cta_url
+    - field.field.node.pricing_plan.field_plan_currency
+    - field.field.node.pricing_plan.field_plan_features
+    - field.field.node.pricing_plan.field_plan_highlighted
+    - field.field.node.pricing_plan.field_plan_price
+    - field.field.node.pricing_plan.field_plan_subtitle
+    - field.field.node.pricing_plan.field_plan_weight
+    - node.type.pricing_plan
+  module:
+    - user
+id: node.pricing_plan.default
+targetEntityType: node
+bundle: pricing_plan
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_plan_badge: true
+  field_plan_billing_period: true
+  field_plan_cta_text: true
+  field_plan_cta_url: true
+  field_plan_currency: true
+  field_plan_features: true
+  field_plan_highlighted: true
+  field_plan_price: true
+  field_plan_subtitle: true
+  field_plan_weight: true

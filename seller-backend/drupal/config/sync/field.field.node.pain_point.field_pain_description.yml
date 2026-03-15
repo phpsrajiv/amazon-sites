@@ -1,0 +1,19 @@
+uuid: a6e6b2b5-d049-4025-bda5-34855c4d07f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pain_description
+    - node.type.pain_point
+id: node.pain_point.field_pain_description
+field_name: field_pain_description
+entity_type: node
+bundle: pain_point
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

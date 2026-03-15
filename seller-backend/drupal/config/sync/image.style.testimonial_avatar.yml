@@ -1,0 +1,15 @@
+uuid: 3b0b7b48-18df-4974-a657-098a0dc97526
+langcode: en
+status: true
+dependencies: {  }
+name: testimonial_avatar
+label: 'Testimonial Avatar (80x80)'
+effects:
+  0817c5b5-7bf2-4f91-b60c-1c1d5fd50635:
+    uuid: 0817c5b5-7bf2-4f91-b60c-1c1d5fd50635
+    id: image_scale_and_crop
+    weight: null
+    data:
+      width: 80
+      height: 80
+      anchor: center-center

@@ -1,0 +1,19 @@
+uuid: 1f369db6-b3da-4e23-951a-21d5eb6c4041
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_mockup_block
+    - field.storage.block_content.field_mockup_actions
+id: block_content.dashboard_mockup_block.field_mockup_actions
+field_name: field_mockup_actions
+entity_type: block_content
+bundle: dashboard_mockup_block
+label: 'Autopilot Actions (JSON)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

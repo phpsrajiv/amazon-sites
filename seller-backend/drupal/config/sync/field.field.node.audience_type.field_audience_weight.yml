@@ -1,0 +1,23 @@
+uuid: 8029317c-c209-428c-9ef7-c1d29c31733b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience_weight
+    - node.type.audience_type
+id: node.audience_type.field_audience_weight
+field_name: field_audience_weight
+entity_type: node
+bundle: audience_type
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

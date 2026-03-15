@@ -1,0 +1,64 @@
+uuid: b67e798e-b1e0-442e-b1f1-e0aaeecc4f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.audience_type.field_audience_description
+    - field.field.node.audience_type.field_audience_icon
+    - field.field.node.audience_type.field_audience_weight
+    - node.type.audience_type
+  module:
+    - path
+id: node.audience_type.default
+targetEntityType: node
+bundle: audience_type
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_audience_description: true
+  field_audience_icon: true
+  field_audience_weight: true
+  promote: true
+  sticky: true

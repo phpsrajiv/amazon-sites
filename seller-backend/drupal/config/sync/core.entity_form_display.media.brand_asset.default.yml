@@ -1,0 +1,57 @@
+uuid: f130d2e8-e138-43a5-ac9c-0acde156a2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.brand_asset.field_brand_type
+    - field.field.media.brand_asset.field_brand_variant
+    - field.field.media.brand_asset.field_media_brand_file
+    - media.type.brand_asset
+  module:
+    - path
+id: media.brand_asset.default
+targetEntityType: media
+bundle: brand_asset
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_brand_type: true
+  field_brand_variant: true
+  field_media_brand_file: true

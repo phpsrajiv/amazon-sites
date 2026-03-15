@@ -1,0 +1,58 @@
+uuid: 83246e87-c227-4898-abf2-9a45896c26f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon.field_icon_identifier
+    - field.field.media.icon.field_media_file
+    - image.style.thumbnail
+    - media.type.icon
+  module:
+    - image
+    - user
+id: media.icon.default
+targetEntityType: media
+bundle: icon
+mode: default
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_icon_identifier: true
+  field_media_file: true
+  name: true

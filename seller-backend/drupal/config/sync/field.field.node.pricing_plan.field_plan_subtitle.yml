@@ -1,0 +1,19 @@
+uuid: dae3a2a0-d22e-4e06-9163-2f4c4e9e4933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plan_subtitle
+    - node.type.pricing_plan
+id: node.pricing_plan.field_plan_subtitle
+field_name: field_plan_subtitle
+entity_type: node
+bundle: pricing_plan
+label: Subtitle
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

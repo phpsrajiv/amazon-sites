@@ -1,0 +1,19 @@
+uuid: 6cac0026-d7a7-45c8-9171-904cc68c6abc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_plan_features
+field_name: field_plan_features
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

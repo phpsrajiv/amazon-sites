@@ -1,0 +1,19 @@
+uuid: 952db5cb-bcc1-4bb5-8c3b-705d3ade2f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_header_block
+    - field.storage.block_content.field_section_tag
+id: block_content.section_header_block.field_section_tag
+field_name: field_section_tag
+entity_type: block_content
+bundle: section_header_block
+label: 'Section Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

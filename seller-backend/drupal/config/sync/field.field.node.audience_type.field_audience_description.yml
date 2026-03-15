@@ -1,0 +1,19 @@
+uuid: 0d9c439e-c85e-44e8-a063-8e86f67b6614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience_description
+    - node.type.audience_type
+id: node.audience_type.field_audience_description
+field_name: field_audience_description
+entity_type: node
+bundle: audience_type
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

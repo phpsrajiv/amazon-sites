@@ -1,0 +1,11 @@
+uuid: 74bd1b35-e1e8-4d1c-8ef9-90c5d15197ee
+langcode: en
+status: true
+dependencies: {  }
+name: Feature
+type: feature
+description: 'Feature cards displayed in the features section.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

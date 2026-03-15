@@ -1,0 +1,11 @@
+uuid: f9241add-6a00-40e3-8fe5-7d4c1b3aea2f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hero Carousel Slide'
+type: hero_slide
+description: 'Individual slides for the hero image carousel.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,24 @@
+uuid: c0dce25a-814a-4037-bc97-5603a4286375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_og_image
+    - media.type.image
+    - node.type.landing_page
+id: node.landing_page.field_og_image
+field_name: field_og_image
+entity_type: node
+bundle: landing_page
+label: 'OG Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

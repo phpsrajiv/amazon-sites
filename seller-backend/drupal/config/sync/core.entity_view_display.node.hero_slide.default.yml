@@ -1,0 +1,27 @@
+uuid: e01a0772-0778-4c01-a799-29a7c69d4bfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hero_slide.field_slide_description
+    - field.field.node.hero_slide.field_slide_image
+    - field.field.node.hero_slide.field_slide_tag
+    - field.field.node.hero_slide.field_slide_weight
+    - node.type.hero_slide
+  module:
+    - user
+id: node.hero_slide.default
+targetEntityType: node
+bundle: hero_slide
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_slide_description: true
+  field_slide_image: true
+  field_slide_tag: true
+  field_slide_weight: true

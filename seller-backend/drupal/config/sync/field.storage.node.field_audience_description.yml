@@ -1,0 +1,19 @@
+uuid: cc72163f-2fb3-41b6-bc11-d8d008ed57d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_audience_description
+field_name: field_audience_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

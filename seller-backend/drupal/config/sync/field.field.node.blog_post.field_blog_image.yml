@@ -1,0 +1,19 @@
+uuid: 52105948-8292-48a8-b127-1dbcf70173ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_image
+    - node.type.blog_post
+id: node.blog_post.field_blog_image
+field_name: field_blog_image
+entity_type: node
+bundle: blog_post
+label: 'Featured Image'
+description: 'Image URL or path'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

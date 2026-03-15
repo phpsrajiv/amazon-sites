@@ -1,0 +1,8 @@
+uuid: dc9bfd50-f514-4804-9755-971cd4c6df5f
+langcode: en
+status: true
+dependencies: {  }
+id: dashboard_mockup_block
+label: 'Dashboard Mockup Block'
+revision: true
+description: null

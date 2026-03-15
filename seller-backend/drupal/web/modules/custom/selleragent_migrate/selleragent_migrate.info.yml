@@ -1,0 +1,8 @@
+name: SellerAgent Migrate
+type: module
+description: Seed data and content migrations for SellerAgent AI.
+package: SellerAgent
+core_version_requirement: ^11
+dependencies:
+  - selleragent_core:selleragent_core
+  - drupal:node

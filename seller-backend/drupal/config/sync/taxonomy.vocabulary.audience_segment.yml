@@ -1,0 +1,9 @@
+uuid: 972f729b-430c-40db-bb5f-cffed31e2805
+langcode: en
+status: true
+dependencies: {  }
+name: 'Audience Segment'
+vid: audience_segment
+description: null
+weight: 0
+new_revision: false

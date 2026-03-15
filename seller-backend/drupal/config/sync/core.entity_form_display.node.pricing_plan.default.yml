@@ -1,0 +1,78 @@
+uuid: 5f256655-b102-4053-8d3a-9da39cb9c704
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pricing_plan.field_plan_badge
+    - field.field.node.pricing_plan.field_plan_billing_period
+    - field.field.node.pricing_plan.field_plan_cta_text
+    - field.field.node.pricing_plan.field_plan_cta_url
+    - field.field.node.pricing_plan.field_plan_currency
+    - field.field.node.pricing_plan.field_plan_features
+    - field.field.node.pricing_plan.field_plan_highlighted
+    - field.field.node.pricing_plan.field_plan_price
+    - field.field.node.pricing_plan.field_plan_subtitle
+    - field.field.node.pricing_plan.field_plan_weight
+    - node.type.pricing_plan
+  module:
+    - path
+id: node.pricing_plan.default
+targetEntityType: node
+bundle: pricing_plan
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_plan_badge: true
+  field_plan_billing_period: true
+  field_plan_cta_text: true
+  field_plan_cta_url: true
+  field_plan_currency: true
+  field_plan_features: true
+  field_plan_highlighted: true
+  field_plan_price: true
+  field_plan_subtitle: true
+  field_plan_weight: true
+  promote: true
+  sticky: true

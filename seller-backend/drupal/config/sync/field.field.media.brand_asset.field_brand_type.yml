@@ -1,0 +1,21 @@
+uuid: 8dcb131e-ccc8-4d3c-9360-997d1af49f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brand_type
+    - media.type.brand_asset
+  module:
+    - options
+id: media.brand_asset.field_brand_type
+field_name: field_brand_type
+entity_type: media
+bundle: brand_asset
+label: 'Asset Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

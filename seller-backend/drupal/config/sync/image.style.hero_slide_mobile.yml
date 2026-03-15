@@ -1,0 +1,15 @@
+uuid: 8404a8db-ab80-4c1e-868a-a8b39dd594b2
+langcode: en
+status: true
+dependencies: {  }
+name: hero_slide_mobile
+label: 'Hero Slide Mobile (800x500)'
+effects:
+  03af5941-9ba5-4482-b2dd-9c2a8aeaa2d7:
+    uuid: 03af5941-9ba5-4482-b2dd-9c2a8aeaa2d7
+    id: image_scale_and_crop
+    weight: null
+    data:
+      width: 800
+      height: 500
+      anchor: center-center

@@ -1,0 +1,23 @@
+uuid: e07a22a0-d449-4490-a05d-c09333f01ffd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pain_weight
+    - node.type.pain_point
+id: node.pain_point.field_pain_weight
+field_name: field_pain_weight
+entity_type: node
+bundle: pain_point
+label: 'Sort Order'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

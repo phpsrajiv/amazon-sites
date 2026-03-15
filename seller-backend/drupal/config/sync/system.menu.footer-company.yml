@@ -1,0 +1,8 @@
+uuid: 4eb9cb4c-b34c-40b8-b8b3-e80de7cd51e5
+langcode: en
+status: true
+dependencies: {  }
+id: footer-company
+label: 'Footer - Company'
+description: null
+locked: false

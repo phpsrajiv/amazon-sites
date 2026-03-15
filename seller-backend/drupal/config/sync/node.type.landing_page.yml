@@ -1,0 +1,11 @@
+uuid: 7ebf5162-2607-4bb0-967a-2c26937cec0b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Page'
+type: landing_page
+description: 'Main page node that ties all sections together.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

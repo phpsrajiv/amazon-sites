@@ -1,0 +1,18 @@
+uuid: d29cf1aa-6de4-41f6-8397-76b94f61e8d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_plan_highlighted
+field_name: field_plan_highlighted
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

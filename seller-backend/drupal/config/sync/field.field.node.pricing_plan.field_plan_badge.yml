@@ -1,0 +1,19 @@
+uuid: 78211f2a-e821-4c2f-91af-b05d8e615744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plan_badge
+    - node.type.pricing_plan
+id: node.pricing_plan.field_plan_badge
+field_name: field_plan_badge
+entity_type: node
+bundle: pricing_plan
+label: 'Badge Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

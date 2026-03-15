@@ -1,0 +1,24 @@
+uuid: 07331238-7326-4bd4-811a-46f25566d3ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_image
+    - media.type.image
+    - node.type.hero_slide
+id: node.hero_slide.field_slide_image
+field_name: field_slide_image
+entity_type: node
+bundle: hero_slide
+label: 'Slide Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

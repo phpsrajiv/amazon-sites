@@ -1,0 +1,24 @@
+uuid: 2d1898d4-a68e-4d92-847a-259daffba509
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_avatar
+    - media.type.image
+    - node.type.testimonial
+id: node.testimonial.field_testimonial_avatar
+field_name: field_testimonial_avatar
+entity_type: node
+bundle: testimonial
+label: Avatar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

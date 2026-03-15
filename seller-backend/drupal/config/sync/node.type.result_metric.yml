@@ -1,0 +1,11 @@
+uuid: 624e6668-a66d-4798-a666-6293307b6399
+langcode: en
+status: true
+dependencies: {  }
+name: 'Results / Proof Metric'
+type: result_metric
+description: 'Metrics in the Proven Results strip.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

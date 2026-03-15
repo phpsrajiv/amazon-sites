@@ -1,0 +1,19 @@
+uuid: 0e97abfd-dcda-4ea0-a683-e8d3150098a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_icon
+    - node.type.feature
+id: node.feature.field_feature_icon
+field_name: field_feature_icon
+entity_type: node
+bundle: feature
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

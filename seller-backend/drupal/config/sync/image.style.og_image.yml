@@ -1,0 +1,15 @@
+uuid: 86c050b5-5aac-4aa4-9104-34ad3d2b0eb2
+langcode: en
+status: true
+dependencies: {  }
+name: og_image
+label: 'OG Image (1200x630)'
+effects:
+  7479a4b5-aba3-47e8-935b-fbd32f5a3d0e:
+    uuid: 7479a4b5-aba3-47e8-935b-fbd32f5a3d0e
+    id: image_scale_and_crop
+    weight: null
+    data:
+      width: 1200
+      height: 630
+      anchor: center-center

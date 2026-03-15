@@ -1,0 +1,19 @@
+uuid: 79349443-3e44-4fa2-a4ad-256646f1ef1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.trust_badge_block
+    - field.storage.block_content.field_badge_icon
+id: block_content.trust_badge_block.field_badge_icon
+field_name: field_badge_icon
+entity_type: block_content
+bundle: trust_badge_block
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

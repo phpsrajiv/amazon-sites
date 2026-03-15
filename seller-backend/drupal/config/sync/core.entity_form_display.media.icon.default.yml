@@ -1,0 +1,55 @@
+uuid: 77de9bec-ea87-4ba3-a001-1d31cfb4d22f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon.field_icon_identifier
+    - field.field.media.icon.field_media_file
+    - media.type.icon
+  module:
+    - path
+id: media.icon.default
+targetEntityType: media
+bundle: icon
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_icon_identifier: true
+  field_media_file: true

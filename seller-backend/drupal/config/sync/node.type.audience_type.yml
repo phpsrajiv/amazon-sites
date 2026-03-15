@@ -1,0 +1,11 @@
+uuid: 29035309-2075-45f5-8898-80d83756d0dc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Audience / Persona'
+type: audience_type
+description: '"Built for Every Amazon Business" audience cards.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: 91295a21-2dcc-4720-a225-ad51a4f76a95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plan_highlighted
+    - node.type.pricing_plan
+id: node.pricing_plan.field_plan_highlighted
+field_name: field_plan_highlighted
+entity_type: node
+bundle: pricing_plan
+label: 'Highlighted (Most Popular)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

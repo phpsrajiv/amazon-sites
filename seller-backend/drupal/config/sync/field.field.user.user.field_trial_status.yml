@@ -1,0 +1,21 @@
+uuid: 80775dc3-30ac-440c-b9a1-dd3a6394e873
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_trial_status
+  module:
+    - options
+    - user
+id: user.user.field_trial_status
+field_name: field_trial_status
+entity_type: user
+bundle: user
+label: 'Trial Status'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

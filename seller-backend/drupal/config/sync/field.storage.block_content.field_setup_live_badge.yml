@@ -1,0 +1,18 @@
+uuid: 25b4b09f-5b56-41ba-aae5-7c9e7165452c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_setup_live_badge
+field_name: field_setup_live_badge
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

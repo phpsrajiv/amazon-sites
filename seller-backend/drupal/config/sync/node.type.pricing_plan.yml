@@ -1,0 +1,11 @@
+uuid: 49787ddb-82ab-46ed-80d4-05214d01afa4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pricing Plan'
+type: pricing_plan
+description: 'Pricing tier cards.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

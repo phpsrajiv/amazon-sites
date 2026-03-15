@@ -1,0 +1,11 @@
+uuid: 8085fe2d-6fbc-4fc3-8d15-1cf99f75a7f8
+langcode: en
+status: true
+dependencies: {  }
+name: 'How It Works Step'
+type: onboarding_step
+description: 'Steps in the How it Works section.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

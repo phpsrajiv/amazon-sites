@@ -1,0 +1,68 @@
+uuid: f18ed525-9ca4-49e0-9333-338a80a0af45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stat_card.field_stat_icon
+    - field.field.node.stat_card.field_stat_prefix
+    - field.field.node.stat_card.field_stat_suffix
+    - field.field.node.stat_card.field_stat_value
+    - field.field.node.stat_card.field_stat_weight
+    - node.type.stat_card
+  module:
+    - path
+id: node.stat_card.default
+targetEntityType: node
+bundle: stat_card
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_stat_icon: true
+  field_stat_prefix: true
+  field_stat_suffix: true
+  field_stat_value: true
+  field_stat_weight: true
+  promote: true
+  sticky: true

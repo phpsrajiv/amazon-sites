@@ -50,8 +50,8 @@ seller-backend/drupal/web/profiles/contrib/
 seller-backend/drupal/web/sites/default/files/
 
 # Drupal settings (generated at install, contains DB credentials)
-seller-backend/config/settings.php
-seller-backend/config/services.yml
+# seller-backend/config/settings.php
+# seller-backend/config/services.yml
 
 # Drupal private files
 seller-backend/drupal/private/

@@ -49,10 +49,19 @@ docker exec selleragent-drupal drush cr
 
 ## Access
 
-| Service  | URL                    |
-|----------|------------------------|
-| Frontend | http://localhost:3000   |
-| Drupal   | http://localhost:8080   |
+| Service        | URL                    |
+|----------------|------------------------|
+| Frontend       | http://localhost:3000   |
+| Drupal Backend | http://localhost:8080   |
+| Drupal Admin   | http://localhost:8080/user/login |
+
+### Default Drupal Credentials
+
+| Username | Password | Email                  | Role          |
+|----------|----------|------------------------|---------------|
+| admin    | admin    | admin@selleragent.ai   | Administrator |
+
+> **Note:** Change the admin password on production using `docker exec selleragent-drupal drush user:password admin "NEW_PASSWORD"`
 
 ## Project Structure
 

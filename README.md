@@ -37,8 +37,8 @@ cd ..
 # 5. Start Docker containers
 docker compose up -d
 
-# 6. Install Drupal site using exported config
-docker exec selleragent-drupal drush site:install --existing-config -y
+# 6. Install Drupal site using minimal profile with exported config
+docker exec selleragent-drupal drush site:install minimal --existing-config -y
 
 # 7. Import content from the exported zip
 docker exec selleragent-drupal drush content:import /opt/drupal/web/scs-export/content-bulk-export-15_03_2026-05_07.zip -y

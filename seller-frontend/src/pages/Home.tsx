@@ -1,9 +1,22 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { FeatureSection } from "@/components/FeatureSection";
 import { PricingSection } from "@/components/PricingSection";
 import { useLandingPageData } from "@/hooks/use-landing-data";
 import { Loader2, AlertTriangle } from "lucide-react";
+
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SellerAgent AI",
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.svg`,
+  description:
+    "AI-powered Amazon advertising automation platform. Increase rankings, lower ACOS, and scale effortlessly.",
+};
 
 export default function Home() {
   const { data, isLoading, isError, error } = useLandingPageData();
@@ -37,8 +50,16 @@ export default function Home() {
   }
 
   return (
-    <Layout>
-      <HeroSection slides={data.hero_slides} stats={data.stats} />
+    <>
+      <SEO
+        title={data.seo?.title}
+        description={data.seo?.description}
+        canonicalUrl={SITE_URL}
+        ogType="website"
+        jsonLd={organizationJsonLd}
+      />
+      <Layout>
+        <HeroSection slides={data.hero_slides} stats={data.stats} />
       <FeatureSection
         painPoints={data.pain_points}
         features={data.features}
@@ -51,6 +72,7 @@ export default function Home() {
         resultMetrics={data.result_metrics}
         ctaSections={data.cta_sections}
       />
-    </Layout>
+      </Layout>
+    </>
   );
 }

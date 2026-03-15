@@ -1,17 +1,22 @@
-uuid: 29d05279-6101-4f13-908a-fe2107406f03
+uuid: 1f5c0c63-ce33-49e7-8b1c-f342d684f09b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.pain_point.field_pain_description
-    - field.field.node.pain_point.field_pain_icon
-    - field.field.node.pain_point.field_pain_weight
-    - node.type.pain_point
+    - field.field.node.blog_post.field_blog_author
+    - field.field.node.blog_post.field_blog_body
+    - field.field.node.blog_post.field_blog_category
+    - field.field.node.blog_post.field_blog_date
+    - field.field.node.blog_post.field_blog_image
+    - field.field.node.blog_post.field_blog_summary
+    - field.field.node.blog_post.field_blog_weight
+    - node.type.blog_post
   module:
     - path
-id: node.pain_point.default
+    - text
+id: node.blog_post.default
 targetEntityType: node
-bundle: pain_point
+bundle: blog_post
 mode: default
 content:
   created:
@@ -20,27 +25,44 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_pain_description:
-    type: string_textarea
-    weight: 7
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_pain_icon:
+  field_blog_author:
     type: string_textfield
-    weight: 10
+    weight: 9
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_pain_weight:
-    type: number
+  field_blog_body:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_blog_category:
+    type: string_textfield
     weight: 11
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_blog_date:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_blog_image:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   path:
@@ -51,7 +73,7 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -70,7 +92,7 @@ content:
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 9
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -98,4 +120,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_blog_summary: true
+  field_blog_weight: true

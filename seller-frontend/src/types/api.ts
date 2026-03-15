@@ -102,6 +102,20 @@ export interface SiteSettings {
   site_slogan: string;
 }
 
+export interface SeoData {
+  title: string;
+  description: string;
+  og_image?: string;
+  og_type?: string;
+  og_title?: string;
+  og_description?: string;
+  og_site_name?: string;
+  twitter_card?: string;
+  article_author?: string;
+  article_published_time?: string;
+  article_section?: string;
+}
+
 export interface LandingPageData {
   hero_slides: HeroSlide[];
   stats: StatCard[];
@@ -114,6 +128,7 @@ export interface LandingPageData {
   result_metrics: ResultMetric[];
   cta_sections: CtaSection[];
   site_settings: SiteSettings;
+  seo?: SeoData;
 }
 
 export interface BlogPost {
@@ -126,6 +141,7 @@ export interface BlogPost {
   field_blog_category: string;
   field_blog_date: string;
   field_blog_weight: string;
+  seo?: SeoData;
 }
 
 export interface DrupalLoginResponse {

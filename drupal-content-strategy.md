@@ -644,3 +644,84 @@ The export is saved at:
 - **Host**: `/Users/rajiv/amazon-sites/seller-backend/drupal/scs-export/content-bulk-export-15_03_2026-05_07.zip`
 
 This zip can be used to re-import all content on a fresh Drupal install using `drush content:import`.
+
+---
+
+## 22. SEO & Online Marketing
+
+### 22.1 Drupal Modules Enabled
+
+| Module | Purpose |
+|--------|---------|
+| `metatag` | Global meta tag management with token support |
+| `metatag_open_graph` | Open Graph tags (og:title, og:description, og:image, etc.) |
+| `metatag_twitter_cards` | Twitter Cards (twitter:card, twitter:title, twitter:image) |
+| `simple_sitemap` | XML sitemap generation at `/sitemap.xml` |
+| `pathauto` | Automatic URL alias patterns |
+
+### 22.2 Metatag Defaults
+
+- **Global**: Site name, default OG and Twitter Card tags using Drupal tokens
+- **Node**: Article-specific OG type, title, summary, and image tokens
+- **Front Page**: Homepage-specific title, description, and OG image
+
+### 22.3 API SEO Data
+
+Both the landing page and blog post API endpoints return an `seo` object:
+
+**`/api/v1/landing-page`** returns:
+```json
+{
+  "seo": {
+    "title": "SellerAgent AI | AI-Powered Amazon Advertising Automation",
+    "description": "...",
+    "og_image": "/opengraph.jpg",
+    "og_type": "website"
+  }
+}
+```
+
+**`/api/v1/blog/{nid}`** returns:
+```json
+{
+  "seo": {
+    "title": "Post Title | SellerAgent AI Blog",
+    "description": "...",
+    "og_title": "Post Title",
+    "og_type": "article",
+    "og_image": "...",
+    "twitter_card": "summary_large_image",
+    "article_author": "...",
+    "article_published_time": "...",
+    "article_section": "..."
+  }
+}
+```
+
+### 22.4 Frontend SEO (react-helmet-async)
+
+- **`<HelmetProvider>`** wraps the app in `main.tsx`
+- **`<SEO>` component** (`src/components/SEO.tsx`) renders `<Helmet>` with all meta tags, OG, Twitter Cards, canonical URL, and optional JSON-LD structured data
+- Each page renders `<SEO>` with page-specific props:
+  - **Home**: Organization JSON-LD, default OG tags
+  - **Blog listing**: Blog-specific title and description
+  - **Blog post**: Dynamic title, description, `og:type=article`, article metadata, BlogPosting JSON-LD
+  - **Not Found**: `noindex` robots directive
+
+### 22.5 Structured Data (JSON-LD)
+
+- **Homepage**: `Organization` schema (name, url, logo, sameAs)
+- **Blog posts**: `BlogPosting` schema (headline, author, datePublished, publisher, image, articleSection)
+
+### 22.6 Additional SEO Files
+
+| File | Purpose |
+|------|---------|
+| `public/robots.txt` | Allows all crawlers, links to sitemap |
+| Vite proxy `/sitemap.xml` | Proxies sitemap requests to Drupal backend |
+
+### 22.7 Google Tag Manager
+
+- GTM placeholder added to `index.html` (commented out with `GTM-XXXXXXX`)
+- `usePageTracking` hook (`src/hooks/use-page-tracking.ts`) pushes virtual pageview events to `window.dataLayer` on every SPA route change
+- To activate: replace `GTM-XXXXXXX` with actual container ID and uncomment the script tags

@@ -26,6 +26,12 @@ class LandingPageController extends ControllerBase {
       'result_metrics' => $this->loadContentByType('result_metric', 'field_metric_weight'),
       'cta_sections' => $this->loadContentByType('cta_section'),
       'site_settings' => $this->getSiteSettings(),
+      'seo' => [
+        'title' => 'SellerAgent AI | AI-Powered Amazon Advertising Automation',
+        'description' => 'Automate your Amazon advertising with intelligent AI agents. Increase rankings, lower ACOS, and scale effortlessly.',
+        'og_image' => '/opengraph.jpg',
+        'og_type' => 'website',
+      ],
     ];
 
     $response = new JsonResponse($data);

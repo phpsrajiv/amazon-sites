@@ -1,15 +1,57 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { useBlogData } from "@/hooks/use-blogs";
 import { Loader2, ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { Link, useParams } from "wouter";
+
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
 
 export default function BlogPost() {
   const { id } = useParams<{ id: string }>();
   const { data: post, isLoading, isError } = useBlogData(id || "");
 
+  const blogPostJsonLd = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.field_blog_summary,
+        author: { "@type": "Person", name: post.field_blog_author },
+        datePublished: post.field_blog_date,
+        image: post.field_blog_image || `${SITE_URL}/opengraph.jpg`,
+        publisher: {
+          "@type": "Organization",
+          name: "SellerAgent AI",
+          logo: {
+            "@type": "ImageObject",
+            url: `${SITE_URL}/favicon.svg`,
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${SITE_URL}/blog/${id}`,
+        },
+        articleSection: post.field_blog_category,
+      }
+    : undefined;
+
   return (
-    <Layout>
-      {isLoading && (
+    <>
+      <SEO
+        title={post ? (post.seo?.title || `${post.title} | SellerAgent AI Blog`) : undefined}
+        description={post ? (post.seo?.description || post.field_blog_summary) : undefined}
+        canonicalUrl={`${SITE_URL}/blog/${id}`}
+        ogType="article"
+        ogTitle={post ? (post.seo?.og_title || post.title) : undefined}
+        ogDescription={post ? (post.seo?.og_description || post.field_blog_summary) : undefined}
+        ogImage={post?.field_blog_image || undefined}
+        articleAuthor={post?.field_blog_author}
+        articlePublishedTime={post?.field_blog_date}
+        articleSection={post?.field_blog_category}
+        jsonLd={blogPostJsonLd}
+      />
+      <Layout>
+        {isLoading && (
         <div className="flex justify-center py-32">
           <Loader2 className="w-8 h-8 animate-spin text-[#FF9900]" />
         </div>
@@ -93,6 +135,7 @@ export default function BlogPost() {
           </section>
         </>
       )}
-    </Layout>
+      </Layout>
+    </>
   );
 }

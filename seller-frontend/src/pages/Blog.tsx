@@ -1,13 +1,23 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { useBlogsData } from "@/hooks/use-blogs";
 import { Loader2, ArrowRight, Calendar, User } from "lucide-react";
 import { Link } from "wouter";
+
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
 
 export default function Blog() {
   const { data: blogs, isLoading, isError } = useBlogsData();
 
   return (
-    <Layout>
+    <>
+      <SEO
+        title="Blog | Insights & Strategies | SellerAgent AI"
+        description="Expert tips, industry insights, and proven strategies to help you dominate Amazon advertising."
+        canonicalUrl={`${SITE_URL}/blog`}
+        ogType="website"
+      />
+      <Layout>
       {/* Hero Banner */}
       <section className="bg-[#131921] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -93,6 +103,7 @@ export default function Blog() {
           )}
         </div>
       </section>
-    </Layout>
+      </Layout>
+    </>
   );
 }

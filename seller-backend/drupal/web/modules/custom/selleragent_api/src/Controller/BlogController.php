@@ -39,6 +39,29 @@ class BlogController extends ControllerBase {
         }
       }
 
+      // Build SEO metadata.
+      $site_config = $this->config('system.site');
+      $site_name = $site_config->get('name');
+      $summary = $node->hasField('field_blog_summary') ? $node->get('field_blog_summary')->value ?? '' : '';
+      $image = $node->hasField('field_blog_image') ? $node->get('field_blog_image')->getString() : '';
+      $author = $node->hasField('field_blog_author') ? $node->get('field_blog_author')->value ?? '' : '';
+      $date = $node->hasField('field_blog_date') ? $node->get('field_blog_date')->value ?? '' : '';
+      $category = $node->hasField('field_blog_category') ? $node->get('field_blog_category')->value ?? '' : '';
+
+      $item['seo'] = [
+        'title' => $node->getTitle() . ' | ' . $site_name . ' Blog',
+        'description' => $summary,
+        'og_title' => $node->getTitle(),
+        'og_description' => $summary,
+        'og_type' => 'article',
+        'og_image' => $image,
+        'og_site_name' => $site_name,
+        'twitter_card' => 'summary_large_image',
+        'article_author' => $author,
+        'article_published_time' => $date,
+        'article_section' => $category,
+      ];
+
       $response = new JsonResponse($item);
       $response->headers->set('Cache-Control', 'public, max-age=300');
       return $response;

@@ -8,10 +8,13 @@ import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
 import BlogPostPage from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
+import { usePageTracking } from "@/hooks/use-page-tracking";
 
 const queryClient = new QueryClient();
 
 function Router() {
+  usePageTracking();
+
   return (
     <Switch>
       <Route path="/" component={Home} />

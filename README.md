@@ -1,0 +1,122 @@
+# SellerAgent AI
+
+Drupal 11 + React 19 SPA for Amazon seller advertising automation.
+
+- **Backend**: Drupal 11 (PHP 8.3, MariaDB 11) with custom API modules
+- **Frontend**: React 19 + Vite + Tailwind CSS + shadcn/ui
+- **Infrastructure**: Docker Compose
+
+## Prerequisites
+
+- Docker & Docker Compose
+- Node.js 20+ (with npm)
+- Composer 2+
+
+## Setup (Fresh Server)
+
+```bash
+# 1. Clone the repo
+git clone git@github.com:phpsrajiv/amazon-sites.git
+cd amazon-sites
+
+# 2. Create .env from example and update credentials
+cp .env.example .env
+# Edit .env with production values (DB passwords, hash salt, etc.)
+
+# 3. Install Drupal dependencies
+cd seller-backend/drupal
+composer install
+cd ../..
+
+# 4. Install frontend dependencies and build
+cd seller-frontend
+npm install
+npm run build
+cd ..
+
+# 5. Start Docker containers
+docker compose up -d
+
+# 6. Install Drupal site using exported config
+docker exec selleragent-drupal drush site:install --existing-config -y
+
+# 7. Import content from the exported zip
+docker exec selleragent-drupal drush content:import /opt/drupal/web/scs-export/content-bulk-export-15_03_2026-05_07.zip -y
+
+# 8. Rebuild cache
+docker exec selleragent-drupal drush cr
+```
+
+## Access
+
+| Service  | URL                    |
+|----------|------------------------|
+| Frontend | http://localhost:3000   |
+| Drupal   | http://localhost:8080   |
+
+## Project Structure
+
+```
+amazon-sites/
+├── .env.example                  # Environment variables template
+├── docker-compose.yml            # Docker services (MariaDB, Drupal, Frontend)
+├── drupal-content-strategy.md    # Full content architecture documentation
+├── seller-backend/
+│   ├── Dockerfile                # Drupal container build
+│   ├── config/                   # Drupal settings (settings.php, services.yml)
+│   ├── scripts/                  # Setup & seed scripts
+│   └── drupal/
+│       ├── composer.json         # PHP dependencies
+│       ├── config/sync/          # Exported Drupal config (505 files)
+│       ├── scs-export/           # Content export zip (single_content_sync)
+│       └── web/
+│           └── modules/custom/
+│               ├── selleragent_core/     # Route access control, core hooks
+│               ├── selleragent_api/      # REST API endpoints
+│               ├── selleragent_trial/    # Trial signup management
+│               └── selleragent_migrate/  # Content seeding
+└── seller-frontend/
+    ├── package.json              # Node dependencies
+    ├── vite.config.ts            # Vite build config
+    ├── index.html                # SPA entry point
+    └── src/
+        ├── components/           # React components (Layout, Auth, Trial)
+        ├── pages/                # Home, Blog, BlogPost, NotFound
+        ├── hooks/                # React Query hooks
+        ├── lib/                  # API client, utilities
+        └── types/                # TypeScript interfaces
+```
+
+## API Endpoints
+
+| Endpoint                    | Method | Description                          |
+|-----------------------------|--------|--------------------------------------|
+| `/api/v1/landing-page`      | GET    | Aggregated landing page data         |
+| `/api/v1/blogs`             | GET    | All published blog posts             |
+| `/api/v1/blog/{nid}`        | GET    | Single blog post by node ID          |
+| `/api/v1/trial-signup`      | POST   | Trial registration                   |
+| `/api/v1/site-settings`     | GET    | Global site settings                 |
+| `/user/login?_format=json`  | POST   | Drupal authentication                |
+
+## Content Types
+
+12 content types: `hero_slide`, `stat_card`, `pain_point`, `feature`, `audience_type`, `onboarding_step`, `testimonial`, `pricing_plan`, `result_metric`, `cta_section`, `landing_page`, `blog_post`
+
+See [drupal-content-strategy.md](drupal-content-strategy.md) for full documentation.
+
+## Development
+
+```bash
+# Start frontend dev server (with hot reload)
+cd seller-frontend
+npm run dev
+
+# Drupal cache rebuild
+docker exec selleragent-drupal drush cr
+
+# Export Drupal config after changes
+docker exec selleragent-drupal drush cex -y
+
+# Export content
+docker exec selleragent-drupal drush content:export --all-content --assets -y
+```

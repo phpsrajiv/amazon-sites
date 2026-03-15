@@ -67,7 +67,7 @@ services:
       - ./seller-frontend/index.html:/docker/sellerbuddy/seller-frontend/index.html
       - ./seller-frontend/vite.config.ts:/docker/sellerbuddy/seller-frontend/vite.config.ts
     ports:
-      - "3003:3003"
+      - "3000:3000"
     networks:
       - selleragent-network
 

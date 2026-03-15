@@ -14,19 +14,19 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "http://localhost:8080",
+        target: "http://drupal:80",
         changeOrigin: true,
       },
       "/user": {
-        target: "http://localhost:8080",
+        target: "http://drupal:80",
         changeOrigin: true,
       },
       "/session": {
-        target: "http://localhost:8080",
+        target: "http://drupal:80",
         changeOrigin: true,
       },
       "/sitemap.xml": {
-        target: "http://localhost:8080",
+        target: "http://drupal:80",
         changeOrigin: true,
       },
     },

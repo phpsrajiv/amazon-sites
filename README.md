@@ -1,4 +1,4 @@
-# SellerAgent AI
+# SellerBuddy AI
 
 Drupal 11 + React 19 SPA for Amazon seller advertising automation.
 

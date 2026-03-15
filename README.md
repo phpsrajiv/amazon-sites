@@ -41,7 +41,7 @@ docker compose up -d
 docker exec selleragent-drupal drush site:install minimal --existing-config -y
 
 # 7. Import content from the exported zip
-docker exec selleragent-drupal drush content:import /opt/drupal/web/scs-export/content-bulk-export-15_03_2026-05_07.zip -y
+docker exec selleragent-drupal drush content:import /opt/drupal/scs-export/content-bulk-export-15_03_2026-05_07.zip -y
 
 # 8. Rebuild cache
 docker exec selleragent-drupal drush cr

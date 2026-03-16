@@ -34,6 +34,7 @@ $settings['config_sync_directory'] = '../config/sync';
 $settings['trusted_host_patterns'] = [
   '^localhost$',
   '^127\.0\.0\.1$',
+  '^cms\.sellerbuddy\.app$',
 ];
 
 if (getenv('DRUPAL_ENV') === 'development') {

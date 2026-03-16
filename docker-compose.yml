@@ -64,8 +64,8 @@ services:
     volumes:
       - ./seller-frontend/src:/docker/sellerbuddy/seller-frontend/src
       - ./seller-frontend/public:/docker/sellerbuddy/seller-frontend/public
-      - ./seller-frontend/index.html:/docker/sellerbuddy/seller-frontend/index.html
-      - ./seller-frontend/vite.config.ts:/docker/sellerbuddy/seller-frontend/vite.config.ts
+      - ${PWD}/seller-frontend/index.html:/docker/sellerbuddy/seller-frontend/index.html
+      - ${PWD}/seller-frontend/vite.config.ts:/docker/sellerbuddy/seller-frontend/vite.config.ts
     ports:
       - "3000:3000"
     networks:

@@ -12,6 +12,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    allowedHosts: ["sellerbuddy.app", ".sellerbuddy.app"],
     proxy: {
       "/api": {
         target: "http://drupal:80",

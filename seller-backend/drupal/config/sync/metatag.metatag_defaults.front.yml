@@ -9,15 +9,15 @@ label: 'Front page'
 tags:
   canonical_url: '[site:url]'
   shortlink: '[site:url]'
-  title: 'SellerAgent AI | AI-Powered Amazon Advertising Automation'
+  title: 'SellerBuddy | AI-Powered Amazon Advertising Automation'
   description: 'Automate your Amazon advertising with intelligent AI agents. Increase rankings, lower ACOS, and scale effortlessly.'
-  og_title: 'SellerAgent AI | AI-Powered Amazon Advertising Automation'
+  og_title: 'SellerBuddy | AI-Powered Amazon Advertising Automation'
   og_description: 'Automate your Amazon advertising with intelligent AI agents. Increase rankings, lower ACOS, and scale effortlessly.'
   og_type: website
   og_url: '[site:url]'
   og_site_name: '[site:name]'
   og_image: '[site:url]opengraph.jpg'
   twitter_cards_type: summary_large_image
-  twitter_cards_title: 'SellerAgent AI | AI-Powered Amazon Advertising Automation'
+  twitter_cards_title: 'SellerBuddy | AI-Powered Amazon Advertising Automation'
   twitter_cards_description: 'Automate your Amazon advertising with intelligent AI agents.'
   twitter_cards_image: '[site:url]opengraph.jpg'

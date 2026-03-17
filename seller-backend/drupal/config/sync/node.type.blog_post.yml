@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 name: 'Blog Post'
 type: blog_post
-description: 'Blog articles for the SellerAgent AI website.'
+description: 'Blog articles for the SellerBuddy website.'
 help: null
 new_revision: true
 preview_mode: 1

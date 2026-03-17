@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.blog_post.field_blog_image
     - field.field.node.blog_post.field_blog_summary
     - field.field.node.blog_post.field_blog_weight
+    - field.field.node.blog_post.field_meta_tags
     - node.type.blog_post
   module:
+    - metatag
     - path
     - text
 id: node.blog_post.default
@@ -64,6 +66,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path

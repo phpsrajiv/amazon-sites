@@ -2,7 +2,7 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: fb062f60-20f2-408c-9d26-189885051783
-name: 'SellerBuddy'
+name: SellerBuddy
 mail: admin@example.com
 slogan: ''
 page:

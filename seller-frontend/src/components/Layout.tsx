@@ -35,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div className="w-8 h-8 rounded-lg bg-[#FF9900] flex items-center justify-center shadow-lg">
               <Zap className="w-4 h-4 text-[#0F1111] fill-[#0F1111]/20" />
             </div>
-            <span className="font-display font-bold text-xl tracking-tight text-white">SellerAgent AI</span>
+            <span className="font-display font-bold text-xl tracking-tight text-white">SellerBuddy</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
@@ -110,7 +110,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <div className="w-6 h-6 rounded bg-[#FF9900] flex items-center justify-center">
                   <Zap className="w-3 h-3 text-[#0F1111] fill-[#0F1111]/20" />
                 </div>
-                <span className="font-display font-bold text-xl text-white">SellerAgent AI</span>
+                <span className="font-display font-bold text-xl text-white">SellerBuddy</span>
               </div>
               <p className="text-gray-400 text-sm max-w-sm mb-6">
                 Automate your entire Amazon business with intelligent AI agents. Increase rankings, lower ACOS, and scale effortlessly.
@@ -136,7 +136,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} SellerAgent AI. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} SellerBuddy. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

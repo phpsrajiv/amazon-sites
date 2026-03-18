@@ -6,12 +6,12 @@ import { PricingSection } from "@/components/PricingSection";
 import { useLandingPageData } from "@/hooks/use-landing-data";
 import { Loader2, AlertTriangle } from "lucide-react";
 
-const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://sellerbuddy.app";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SellerAgent AI",
+  name: "SellerBuddy",
   url: SITE_URL,
   logo: `${SITE_URL}/favicon.svg`,
   description:

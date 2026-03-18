@@ -66,13 +66,13 @@ export function FeatureSection({ painPoints, features, audienceTypes }: FeatureS
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FF9900]/10 text-[#0F1111] text-sm font-semibold mb-6 border border-[#FF9900]/20">
                 <Bot className="w-4 h-4 text-[#FF9900]" />
-                <span>Meet SellerAgent AI — Your Amazon Ads Co-Pilot</span>
+                <span>Meet SellerBuddy — Your Amazon Ads Co-Pilot</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 leading-tight text-[#0F1111]">
                 Easy Setup. <br /><span className="text-[#FF9900]">Instant Results.</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Get started without tech headaches. Connect your Amazon account, set your goals, and let SellerAgent AI do the heavy lifting — no complex setup, no learning curve.
+                Get started without tech headaches. Connect your Amazon account, set your goals, and let SellerBuddy do the heavy lifting — no complex setup, no learning curve.
               </p>
 
               <ul className="space-y-5">
@@ -184,7 +184,7 @@ export function FeatureSection({ painPoints, features, audienceTypes }: FeatureS
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4 text-[#131921]">Built for Every Amazon Business</h2>
-            <p className="text-gray-600 text-lg">From 1 store to 100 — SellerAgent AI fits your workflow.</p>
+            <p className="text-gray-600 text-lg">From 1 store to 100 — SellerBuddy fits your workflow.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {audienceTypes.map((item, i) => {

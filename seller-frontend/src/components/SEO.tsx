@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_NAME = "SellerAgent AI";
-const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
+const SITE_NAME = "SellerBuddy";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://sellerbuddy.app";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph.jpg`;
 const DEFAULT_DESCRIPTION =
   "Automate your Amazon advertising with intelligent AI agents. Increase rankings, lower ACOS, and scale effortlessly.";

@@ -4,7 +4,7 @@ import { useBlogsData } from "@/hooks/use-blogs";
 import { Loader2, ArrowRight, Calendar, User } from "lucide-react";
 import { Link } from "wouter";
 
-const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://sellerbuddy.app";
 
 export default function Blog() {
   const { data: blogs, isLoading, isError } = useBlogsData();
@@ -12,7 +12,7 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="Blog | Insights & Strategies | SellerAgent AI"
+        title="Blog | Insights & Strategies | SellerBuddy"
         description="Expert tips, industry insights, and proven strategies to help you dominate Amazon advertising."
         canonicalUrl={`${SITE_URL}/blog`}
         ogType="website"

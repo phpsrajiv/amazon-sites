@@ -1,0 +1,42 @@
+# SellerBuddy
+
+> AI-powered Amazon advertising automation SaaS for sellers, brands, and agencies.
+
+## About
+
+SellerBuddy is an AI-powered platform that automates Amazon advertising for sellers, brands, and agencies. It simplifies campaign management, bid optimization, and keyword targeting so Amazon sellers can focus on growing their business.
+
+## Website
+
+- Homepage: https://sellerbuddy.app/
+- Blog: https://sellerbuddy.app/blog
+
+## Key Features
+
+- Automated Amazon PPC campaign management
+- AI-driven bid optimization
+- Smart keyword targeting and research
+- Performance analytics and reporting
+- Multi-account and agency support
+
+## Target Audience
+
+- Amazon sellers looking to automate advertising
+- E-commerce brands scaling on Amazon
+- Agencies managing multiple Amazon seller accounts
+
+## Pages
+
+- / — Landing page with features, pricing, testimonials, and onboarding steps
+- /blog — Blog listing with SEO-optimized articles on Amazon advertising
+- /blog/:id — Individual blog posts
+
+## API
+
+- GET /api/v1/landing-page — Landing page content (hero, features, pricing, testimonials)
+- GET /api/v1/blogs — All published blog posts
+- GET /api/v1/blog/{id} — Single blog post with SEO metadata
+
+## Contact
+
+- Website: https://sellerbuddy.app

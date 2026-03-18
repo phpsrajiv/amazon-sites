@@ -4,7 +4,7 @@ import { useBlogData } from "@/hooks/use-blogs";
 import { Loader2, ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { Link, useParams } from "wouter";
 
-const SITE_URL = import.meta.env.VITE_SITE_URL || "https://selleragent.ai";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://sellerbuddy.app";
 
 export default function BlogPost() {
   const { id } = useParams<{ id: string }>();
@@ -21,7 +21,7 @@ export default function BlogPost() {
         image: post.field_blog_image || `${SITE_URL}/opengraph.jpg`,
         publisher: {
           "@type": "Organization",
-          name: "SellerAgent AI",
+          name: "SellerBuddy",
           logo: {
             "@type": "ImageObject",
             url: `${SITE_URL}/favicon.svg`,
@@ -38,7 +38,7 @@ export default function BlogPost() {
   return (
     <>
       <SEO
-        title={post ? (post.seo?.title || `${post.title} | SellerAgent AI Blog`) : undefined}
+        title={post ? (post.seo?.title || `${post.title} | SellerBuddy Blog`) : undefined}
         description={post ? (post.seo?.description || post.field_blog_summary) : undefined}
         canonicalUrl={`${SITE_URL}/blog/${id}`}
         ogType="article"

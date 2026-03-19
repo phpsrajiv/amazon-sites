@@ -48,6 +48,7 @@ services:
       - ./seller-backend/config/settings.php:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/settings.php
       - ./seller-backend/config/services.yml:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/services.yml
       - ./seller-backend/drupal/config:/docker/sellerbuddy/seller-backend/drupal/config
+      - ./seller-backend/drupal/config/sync:/docker/sellerbuddy/seller-backend/drupal/config/sync
     ports:
       - "8080:80"
     networks:

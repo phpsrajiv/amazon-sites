@@ -44,6 +44,7 @@ RUN chown -R www-data:www-data /opt/drupal/web/sites/default \
 # Copy custom settings
 COPY config/settings.php /opt/drupal/web/sites/default/settings.php
 COPY config/services.yml /opt/drupal/web/sites/default/services.yml
+COPY drupal/config/sync /opt/drupal/config/sync
 
 # Set proper ownership
 RUN chown -R www-data:www-data /opt/drupal

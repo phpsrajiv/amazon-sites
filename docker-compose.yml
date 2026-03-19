@@ -47,6 +47,7 @@ services:
       - ./seller-backend/drupal/web/themes/custom:/docker/sellerbuddy/seller-backend/drupal/web/themes/custom
       - ./seller-backend/config/settings.php:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/settings.php
       - ./seller-backend/config/services.yml:/docker/sellerbuddy/seller-backend/drupal/web/sites/default/services.yml
+      - ./seller-backend/drupal/config:/docker/sellerbuddy/seller-backend/drupal/config
     ports:
       - "8080:80"
     networks:
@@ -85,13 +86,9 @@ services:
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4-turbo-preview}
       OPENAI_FAST_MODEL: ${OPENAI_FAST_MODEL:-gpt-3.5-turbo}
       GSC_SERVICE_ACCOUNT_JSON: /app/credentials/sellerbuddy-gsc.json
-      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-}
-      # DRUPAL_USERNAME: Environment variable for Drupal admin username
-      # Default value: empty string (if DRUPAL_USERNAME is not set in .env file)
-      # Usage: Set this in your .env file or pass it at runtime to configure the Drupal administrator account username
-      # Example: DRUPAL_USERNAME=admin
-      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-}
-      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-}
+      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
+      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
+      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}
     volumes:
       - ./credentials:/app/credentials:ro
       - ./ai-agents/seo-agent/src:/app/src
@@ -113,9 +110,9 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4-turbo-preview}
       OPENAI_FAST_MODEL: ${OPENAI_FAST_MODEL:-gpt-3.5-turbo}
-      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-}
-      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-}
-      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-}
+      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
+      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
+      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}
     volumes:
       - ./ai-agents/content-writer-agent/src:/app/src
     ports:

@@ -1,6 +1,6 @@
-# SellerAgent AI — Landing Page
+# SellerBuddy — Landing Page
 
-A modern SaaS landing page for SellerAgent AI, built with React + Vite + Tailwind CSS.
+A modern SaaS landing page for SellerBuddy, built with React + Vite + Tailwind CSS.
 
 ## Requirements
 

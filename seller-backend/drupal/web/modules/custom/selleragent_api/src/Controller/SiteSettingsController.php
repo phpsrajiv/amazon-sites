@@ -19,7 +19,7 @@ class SiteSettingsController extends ControllerBase {
     $data = [
       'site_name' => $site_config->get('name'),
       'site_slogan' => $site_config->get('slogan'),
-      'copyright_text' => date('Y') . ' SellerAgent AI. All rights reserved.',
+      'copyright_text' => date('Y') . ' SellerBuddy. All rights reserved.',
     ];
 
     return new JsonResponse($data);

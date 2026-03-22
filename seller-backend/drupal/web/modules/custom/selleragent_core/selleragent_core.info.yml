@@ -1,7 +1,7 @@
-name: SellerAgent Core
+name: SellerBuddy Core
 type: module
-description: Core functionality for SellerAgent AI platform.
-package: SellerAgent
+description: Core functionality for SellerBuddy platform.
+package: SellerBuddy
 core_version_requirement: ^11
 dependencies:
   - drupal:node

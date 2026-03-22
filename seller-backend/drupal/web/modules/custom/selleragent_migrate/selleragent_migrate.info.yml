@@ -1,7 +1,7 @@
-name: SellerAgent Migrate
+name: SellerBuddy Migrate
 type: module
-description: Seed data and content migrations for SellerAgent AI.
-package: SellerAgent
+description: Seed data and content migrations for SellerBuddy.
+package: SellerBuddy
 core_version_requirement: ^11
 dependencies:
   - selleragent_core:selleragent_core

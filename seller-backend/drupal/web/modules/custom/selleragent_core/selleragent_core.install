@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update, and uninstall functions for the SellerAgent Core module.
+ * Install, update, and uninstall functions for the SellerBuddy Core module.
  */
 
 use Drupal\user\Entity\Role;
@@ -53,5 +53,5 @@ function selleragent_core_install() {
     $role->save();
   }
 
-  \Drupal::messenger()->addStatus(t('SellerAgent Core: Roles created successfully.'));
+  \Drupal::messenger()->addStatus(t('SellerBuddy Core: Roles created successfully.'));
 }

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * SellerAgent AI - Complete Drupal content architecture setup.
+ * SellerBuddy - Complete Drupal content architecture setup.
  *
  * Run with: drush php:script scripts/setup-content-architecture.php
  */
@@ -657,7 +657,7 @@ echo "  Roles done.\n";
 // ============================================================
 
 echo "\n=============================================\n";
-echo "  SellerAgent AI Content Architecture Setup  \n";
+echo "  SellerBuddy Content Architecture Setup  \n";
 echo "  COMPLETE                                   \n";
 echo "=============================================\n\n";
 echo "Summary:\n";

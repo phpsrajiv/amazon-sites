@@ -1,5 +1,5 @@
 #!/bin/bash
-# SellerAgent AI - Drupal 11 Installation Script
+# SellerBuddy - Drupal 11 Installation Script
 # Run this after docker compose up to install Drupal site.
 
 set -e
@@ -12,10 +12,10 @@ docker exec selleragent-drupal bash -c "
   cd /opt/drupal && \
   vendor/bin/drush site:install standard \
     --db-url=mysql://\${DRUPAL_DB_USER}:\${DRUPAL_DB_PASSWORD}@\${DRUPAL_DB_HOST}:\${DRUPAL_DB_PORT}/\${DRUPAL_DB_NAME} \
-    --site-name='SellerAgent AI' \
+    --site-name='SellerBuddy' \
     --account-name=admin \
     --account-pass=admin \
-    --account-mail=admin@selleragent.ai \
+    --account-mail=business@sellerbuddy.app \
     --no-interaction \
     -y
 "
@@ -61,7 +61,7 @@ docker exec selleragent-drupal bash -c "cd /opt/drupal && vendor/bin/drush cr"
 
 echo ""
 echo "============================================="
-echo "  SellerAgent AI - Drupal 11 Installation    "
+echo "  SellerBuddy - Drupal 11 Installation    "
 echo "============================================="
 echo ""
 echo "  Drupal Admin:  http://localhost:8080"

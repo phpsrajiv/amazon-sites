@@ -11,7 +11,7 @@ use Drupal\node\Entity\Node;
 use Drupal\block_content\Entity\BlockContent;
 
 echo "\n=============================================\n";
-echo "  SellerAgent AI — Seeding Content           \n";
+echo "  SellerBuddy — Seeding Content           \n";
 echo "=============================================\n\n";
 
 // ============================================================
@@ -202,7 +202,7 @@ echo "\n=== 7. TESTIMONIALS ===\n";
 $testimonials = [
   [
     'title' => 'Cerin Pathrose Review',
-    'field_testimonial_body' => 'I have been using SellerAgent AI for more than a year. I am in love with their AI tool that helps us continuously grow on Amazon. Their autopilot alone is worth every dollar!',
+    'field_testimonial_body' => 'I have been using SellerBuddy for more than a year. I am in love with their AI tool that helps us continuously grow on Amazon. Their autopilot alone is worth every dollar!',
     'field_testimonial_author' => 'Cerin Pathrose',
     'field_testimonial_role' => 'Deputy Manager',
     'field_testimonial_company' => 'Nitta Gelatin India Ltd.',
@@ -211,7 +211,7 @@ $testimonials = [
   ],
   [
     'title' => 'Natesan Chandrasekaran Review',
-    'field_testimonial_body' => 'Ever since SellerAgent AI started managing our ads, we\'ve had a great improvement in sales. Ad spend is now controlled and orders are generating much more than when we were running ads ourselves.',
+    'field_testimonial_body' => 'Ever since SellerBuddy started managing our ads, we\'ve had a great improvement in sales. Ad spend is now controlled and orders are generating much more than when we were running ads ourselves.',
     'field_testimonial_author' => 'Natesan Chandrasekaran',
     'field_testimonial_role' => 'Founder',
     'field_testimonial_company' => 'The Slime Space',
@@ -345,11 +345,11 @@ foreach ($ctas as $data) {
 echo "\n=== 11. LANDING PAGE ===\n";
 
 $existing = \Drupal::entityTypeManager()->getStorage('node')
-  ->loadByProperties(['type' => 'landing_page', 'title' => 'SellerAgent AI - Home']);
+  ->loadByProperties(['type' => 'landing_page', 'title' => 'SellerBuddy - Home']);
 if (empty($existing)) {
   Node::create([
     'type' => 'landing_page',
-    'title' => 'SellerAgent AI - Home',
+    'title' => 'SellerBuddy - Home',
     'field_meta_description' => 'Supercharge your Amazon business with AI-powered ad optimization, autopilot campaigns, agentic AI chatbot, and advanced reporting. Trusted by 12,000+ sellers.',
     'status' => 1,
   ])->save();
@@ -392,9 +392,9 @@ $headers = [
   ],
   [
     'info' => 'Section: Easy Setup',
-    'field_section_tag' => 'Meet SellerAgent AI — Your Amazon Ads Co-Pilot',
+    'field_section_tag' => 'Meet SellerBuddy — Your Amazon Ads Co-Pilot',
     'field_section_heading' => 'Easy Setup. Instant Results.',
-    'field_section_subheading' => 'Get started without tech headaches. Connect your Amazon account, set your goals, and let SellerAgent AI do the heavy lifting — no complex setup, no learning curve.',
+    'field_section_subheading' => 'Get started without tech headaches. Connect your Amazon account, set your goals, and let SellerBuddy do the heavy lifting — no complex setup, no learning curve.',
   ],
   [
     'info' => 'Section: Features',
@@ -406,7 +406,7 @@ $headers = [
     'info' => 'Section: Audience',
     'field_section_tag' => '',
     'field_section_heading' => 'Built for Every Amazon Business',
-    'field_section_subheading' => 'From 1 store to 100 — SellerAgent AI fits your workflow.',
+    'field_section_subheading' => 'From 1 store to 100 — SellerBuddy fits your workflow.',
   ],
   [
     'info' => 'Section: Results',

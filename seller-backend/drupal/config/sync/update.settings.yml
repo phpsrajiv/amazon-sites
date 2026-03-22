@@ -9,5 +9,5 @@ fetch:
   timeout: 30
 notification:
   emails:
-    - admin@selleragent.ai
+    - business@sellerbuddy.app
   threshold: all

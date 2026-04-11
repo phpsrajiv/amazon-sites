@@ -121,10 +121,86 @@ services:
     networks:
       - selleragent-network
 
+  # ─── Video Script Agent (Python/FastAPI) ───────────────
+  video-script-agent:
+    build:
+      context: ./ai-agents/video-script-agent
+      dockerfile: Dockerfile
+    container_name: selleragent-video-script
+    restart: unless-stopped
+    depends_on:
+      - drupal
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4-turbo-preview}
+      OPENAI_FAST_MODEL: ${OPENAI_FAST_MODEL:-gpt-3.5-turbo}
+      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
+      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
+      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}
+    volumes:
+      - ./ai-agents/video-script-agent/src:/app/src
+    ports:
+      - "8003:8003"
+    networks:
+      - selleragent-network
+
+  # ─── Video Generator Agent (Python/FastAPI) ────────────
+  video-generator-agent:
+    build:
+      context: ./ai-agents/video-generator-agent
+      dockerfile: Dockerfile
+    container_name: selleragent-video-generator
+    restart: unless-stopped
+    depends_on:
+      - drupal
+    environment:
+      GOOGLE_GENAI_API_KEY: ${GOOGLE_GENAI_API_KEY}
+      ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY}
+      GOOGLE_APPLICATION_CREDENTIALS: /app/credentials/sellerbuddy-gsc.json
+      VEO_MODEL: ${VEO_MODEL:-veo-3.1-generate-preview}
+      ELEVENLABS_VOICE_ID: ${ELEVENLABS_VOICE_ID:-JBFqnCBsd6RMkjVDRZzb}
+      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
+      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
+      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}
+    volumes:
+      - ./ai-agents/video-generator-agent/src:/app/src
+      - ./credentials:/app/credentials:ro
+      - video_output:/app/output
+    ports:
+      - "8004:8004"
+    networks:
+      - selleragent-network
+
+  # ─── Social Media Agent (Python/FastAPI) ────────────────
+  social-media-agent:
+    build:
+      context: ./ai-agents/social-media-agent
+      dockerfile: Dockerfile
+    container_name: selleragent-social-media
+    restart: unless-stopped
+    depends_on:
+      - drupal
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4-turbo-preview}
+      OPENAI_FAST_MODEL: ${OPENAI_FAST_MODEL:-gpt-3.5-turbo}
+      NEWS_API_KEY: ${NEWS_API_KEY:-}
+      DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
+      DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
+      DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}
+    volumes:
+      - ./ai-agents/social-media-agent/src:/app/src
+    ports:
+      - "8005:8005"
+    networks:
+      - selleragent-network
+
 volumes:
   mariadb_data:
     driver: local
   drupal_files:
+    driver: local
+  video_output:
     driver: local
 
 networks:

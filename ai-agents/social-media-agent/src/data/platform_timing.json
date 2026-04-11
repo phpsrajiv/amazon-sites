@@ -1,0 +1,87 @@
+{
+  "linkedin": {
+    "timezone": "Asia/Kolkata",
+    "peak_windows": [
+      {
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+        "start_hour": 8,
+        "end_hour": 10,
+        "multiplier": 1.5,
+        "label": "Morning commute"
+      },
+      {
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+        "start_hour": 12,
+        "end_hour": 13,
+        "multiplier": 1.2,
+        "label": "Lunch break"
+      },
+      {
+        "days": ["tuesday", "wednesday"],
+        "start_hour": 17,
+        "end_hour": 18,
+        "multiplier": 1.3,
+        "label": "End of workday"
+      }
+    ],
+    "avoid_windows": [
+      {
+        "days": ["saturday", "sunday"],
+        "start_hour": 0,
+        "end_hour": 24,
+        "multiplier": 0.3,
+        "label": "Weekend — low professional engagement"
+      }
+    ],
+    "default_multiplier": 0.5
+  },
+  "facebook": {
+    "timezone": "Asia/Kolkata",
+    "peak_windows": [
+      {
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+        "start_hour": 13,
+        "end_hour": 16,
+        "multiplier": 1.4,
+        "label": "Afternoon peak"
+      },
+      {
+        "days": ["saturday", "sunday"],
+        "start_hour": 10,
+        "end_hour": 12,
+        "multiplier": 1.3,
+        "label": "Weekend morning"
+      }
+    ],
+    "avoid_windows": [],
+    "default_multiplier": 0.5
+  },
+  "instagram": {
+    "timezone": "Asia/Kolkata",
+    "peak_windows": [
+      {
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+        "start_hour": 18,
+        "end_hour": 21,
+        "multiplier": 1.5,
+        "label": "Evening scroll"
+      },
+      {
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+        "start_hour": 11,
+        "end_hour": 13,
+        "multiplier": 1.2,
+        "label": "Midday break"
+      },
+      {
+        "days": ["saturday", "sunday"],
+        "start_hour": 10,
+        "end_hour": 14,
+        "multiplier": 1.3,
+        "label": "Weekend browsing"
+      }
+    ],
+    "avoid_windows": [],
+    "default_multiplier": 0.5
+  }
+}

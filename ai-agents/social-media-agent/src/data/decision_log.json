@@ -1,0 +1,84 @@
+[
+  {
+    "id": "7f5cd39f-887c-488a-894f-910bc26f5226",
+    "timestamp": "2026-04-06T07:11:57.134329",
+    "decision_type": "timing_recommendation",
+    "platform": null,
+    "agent_name": "timing_engine",
+    "action": "Generated 9 timing recommendations for 3 platforms",
+    "rationale": "Date range: 2026-04-06 to 2026-04-06, News: normal, Crisis: False",
+    "input_summary": {
+      "platforms": [
+        "facebook",
+        "linkedin",
+        "instagram"
+      ],
+      "date_start": "2026-04-06",
+      "date_end": "2026-04-06",
+      "slots_per_platform": 3
+    },
+    "output_summary": {
+      "total_recommendations": 9,
+      "top_score": 1.4
+    },
+    "event_context": null,
+    "news_context": null
+  },
+  {
+    "id": "5109de23-740f-4183-8160-8b70d0df6edf",
+    "timestamp": "2026-04-06T07:14:16.175004",
+    "decision_type": "timing_recommendation",
+    "platform": "facebook",
+    "agent_name": "timing_engine",
+    "action": "Should-post-now check for facebook: NO",
+    "rationale": "Platform baseline: 0.5 (Off-peak) | Pre-event 'Ram Navami' in 2d: +0.00",
+    "input_summary": {
+      "platform": "facebook",
+      "hour": 7
+    },
+    "output_summary": {
+      "should_post": false,
+      "score": 0.5
+    },
+    "event_context": null,
+    "news_context": null
+  },
+  {
+    "id": "273736ca-dbe9-4252-8f80-eb7d1f46be4d",
+    "timestamp": "2026-04-06T07:14:18.592263",
+    "decision_type": "timing_recommendation",
+    "platform": "facebook",
+    "agent_name": "timing_engine",
+    "action": "Should-post-now check for facebook: NO",
+    "rationale": "Platform baseline: 0.5 (Off-peak) | Pre-event 'Ram Navami' in 2d: +0.00",
+    "input_summary": {
+      "platform": "facebook",
+      "hour": 7
+    },
+    "output_summary": {
+      "should_post": false,
+      "score": 0.5
+    },
+    "event_context": null,
+    "news_context": null
+  },
+  {
+    "id": "abdd9c14-4fc8-493e-8ec7-9eb9fe8801ea",
+    "timestamp": "2026-04-06T07:14:36.992764",
+    "decision_type": "timing_recommendation",
+    "platform": "instagram",
+    "agent_name": "timing_engine",
+    "action": "Should-post-now check for instagram: NO",
+    "rationale": "Platform baseline: 0.5 (Off-peak) | Pre-event 'Ram Navami' in 2d: +0.00",
+    "input_summary": {
+      "platform": "instagram",
+      "hour": 7
+    },
+    "output_summary": {
+      "should_post": false,
+      "score": 0.5
+    },
+    "event_context": null,
+    "news_context": null
+  }
+]

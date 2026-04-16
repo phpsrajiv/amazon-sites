@@ -12,6 +12,8 @@ class DecisionType(str, Enum):
     CONTENT_GENERATION = "content_generation"
     POST_PUBLISHED = "post_published"
     ENGAGEMENT_LOGGED = "engagement_logged"
+    TOPIC_SELECTION = "topic_selection"
+    WEEKLY_PLAN_GENERATED = "weekly_plan_generated"
 
 
 class DecisionLogEntry(BaseModel):

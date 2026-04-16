@@ -30,6 +30,9 @@ _calendar_service = None
 _news_service = None
 _engagement_service = None
 _agent_logger = None
+_drupal_client = None
+_seo_client = None
+_topic_pipeline = None
 
 
 def get_calendar_service():
@@ -99,6 +102,39 @@ def get_instagram_gen():
         from src.agents.instagram_generator import InstagramGenerator
         _instagram_gen = InstagramGenerator(agent_logger=get_agent_logger())
     return _instagram_gen
+
+
+def get_drupal_client():
+    global _drupal_client
+    if _drupal_client is None:
+        from src.services.drupal_client import DrupalClient
+        _drupal_client = DrupalClient()
+    return _drupal_client
+
+
+def get_seo_client():
+    global _seo_client
+    if _seo_client is None:
+        from src.services.seo_client import SEOClient
+        _seo_client = SEOClient()
+    return _seo_client
+
+
+def get_topic_pipeline():
+    global _topic_pipeline
+    if _topic_pipeline is None:
+        from src.agents.topic_pipeline import TopicPipeline
+        _topic_pipeline = TopicPipeline(
+            calendar_service=get_calendar_service(),
+            seo_client=get_seo_client(),
+            drupal_client=get_drupal_client(),
+            agent_logger=get_agent_logger(),
+            timing_engine=get_timing_engine(),
+            facebook_gen=get_facebook_gen(),
+            linkedin_gen=get_linkedin_gen(),
+            instagram_gen=get_instagram_gen(),
+        )
+    return _topic_pipeline
 
 
 # ---------------------------------------------------------------------------
@@ -255,6 +291,21 @@ async def generate_all(topic: str, brand: str = "SellerBuddy", event_context: st
             "linkedin": li_result.model_dump(mode="json"),
             "instagram": ig_result.model_dump(mode="json"),
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ---------------------------------------------------------------------------
+# Weekly content pipeline (Topic Pipeline)
+# ---------------------------------------------------------------------------
+from src.models.topic_pipeline import WeeklyContentPlanRequest
+
+@app.post("/api/social/generate/weekly-content")
+async def generate_weekly_content(req: WeeklyContentPlanRequest):
+    try:
+        pipeline = get_topic_pipeline()
+        result = pipeline.generate_weekly_plan(req)
+        return result.model_dump(mode="json")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

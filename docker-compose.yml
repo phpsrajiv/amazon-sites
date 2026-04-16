@@ -185,6 +185,7 @@ services:
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4-turbo-preview}
       OPENAI_FAST_MODEL: ${OPENAI_FAST_MODEL:-gpt-3.5-turbo}
       NEWS_API_KEY: ${NEWS_API_KEY:-}
+      SEO_AGENT_URL: http://seo-agent:8001
       DRUPAL_BASE_URL: ${DRUPAL_BASE_URL:-http://drupal:80}
       DRUPAL_USERNAME: ${DRUPAL_USERNAME:-admin}
       DRUPAL_PASSWORD: ${DRUPAL_PASSWORD:-admin}

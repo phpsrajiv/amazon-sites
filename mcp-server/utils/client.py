@@ -27,13 +27,37 @@ from typing import Any
 def _resolve_urls() -> dict[str, str]:
     remote_base = os.getenv("SELLERBUDDY_REMOTE_BASE", "").rstrip("/")
 
-    defaults = {
-        "seo":             f"{remote_base}/seo"             if remote_base else "http://localhost:8001",
-        "content":         f"{remote_base}/content"         if remote_base else "http://localhost:8002",
-        "video_script":    f"{remote_base}/video-script"    if remote_base else "http://localhost:8003",
-        "video_generator": f"{remote_base}/video-generator" if remote_base else "http://localhost:8004",
-        "social":          f"{remote_base}/social"          if remote_base else "http://localhost:8005",
-    }
+    # When running inside Docker, agents are on the Docker network by service name.
+    # Set SELLERBUDDY_DOCKER=1 (done automatically via docker-compose env) to use
+    # Docker service names, or set individual URLs / SELLERBUDDY_REMOTE_BASE.
+    is_docker = os.getenv("SELLERBUDDY_DOCKER", "")
+
+    if remote_base:
+        local = {
+            "seo":             f"{remote_base}/seo",
+            "content":         f"{remote_base}/content",
+            "video_script":    f"{remote_base}/video-script",
+            "video_generator": f"{remote_base}/video-generator",
+            "social":          f"{remote_base}/social",
+        }
+    elif is_docker:
+        local = {
+            "seo":             "http://seo-agent:8001",
+            "content":         "http://content-writer-agent:8002",
+            "video_script":    "http://video-script-agent:8003",
+            "video_generator": "http://video-generator-agent:8004",
+            "social":          "http://social-media-agent:8005",
+        }
+    else:
+        local = {
+            "seo":             "http://localhost:8001",
+            "content":         "http://localhost:8002",
+            "video_script":    "http://localhost:8003",
+            "video_generator": "http://localhost:8004",
+            "social":          "http://localhost:8005",
+        }
+
+    defaults = local
 
     return {
         "seo":             os.getenv("SELLERBUDDY_SEO_URL",             defaults["seo"]).rstrip("/"),

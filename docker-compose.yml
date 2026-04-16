@@ -196,6 +196,32 @@ services:
     networks:
       - selleragent-network
 
+  # ─── MCP Server (SSE transport) ──────────────────────────
+  mcp-server:
+    build:
+      context: ./mcp-server
+      dockerfile: Dockerfile
+    container_name: selleragent-mcp
+    restart: unless-stopped
+    depends_on:
+      - seo-agent
+      - content-writer-agent
+      - video-script-agent
+      - video-generator-agent
+      - social-media-agent
+    environment:
+      MCP_TRANSPORT: sse
+      MCP_PORT: "8006"
+      SELLERBUDDY_DOCKER: "1"
+    volumes:
+      - ./mcp-server/server.py:/app/server.py
+      - ./mcp-server/tools:/app/tools
+      - ./mcp-server/utils:/app/utils
+    ports:
+      - "8006:8006"
+    networks:
+      - selleragent-network
+
 volumes:
   mariadb_data:
     driver: local

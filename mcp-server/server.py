@@ -15,18 +15,27 @@ Usage:
   # Install
   pip install -e .
 
-  # Run (stdio transport — used by Claude Code / claude_desktop_config.json)
+  # Run locally (stdio transport — used by Claude Code / claude_desktop_config.json)
   python server.py
+
+  # Run in Docker (SSE transport on port 8006)
+  MCP_TRANSPORT=sse python server.py
 
   # Or via the installed script
   sellerbuddy-mcp
 """
 
+import os
+
 from mcp.server.fastmcp import FastMCP
 
 from tools import seo, content, video_script, video_generator, social
 
-mcp = FastMCP("SellerBuddy AI Agents")
+mcp = FastMCP(
+    "SellerBuddy AI Agents",
+    host="0.0.0.0",
+    port=int(os.getenv("MCP_PORT", "8006")),
+)
 
 # Register all agent tool groups
 seo.register(mcp)
@@ -37,7 +46,8 @@ social.register(mcp)
 
 
 def main() -> None:
-    mcp.run()
+    transport = os.getenv("MCP_TRANSPORT", "stdio")
+    mcp.run(transport=transport)
 
 
 if __name__ == "__main__":
